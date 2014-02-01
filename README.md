@@ -1,4 +1,4 @@
-SEtSim
+SEtSim ver 2.0
 ======
 
 SEtSim is a modular simulation tool for switched Ethernet networks. Currently, it supports different architectures of the FTT-SE protocol, i.e., single-/multi-master and cluster-based architectures. 
