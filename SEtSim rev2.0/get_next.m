@@ -1,3 +1,9 @@
+%---------------------------------------------------------------------
+% Copyright 2013 Mohammad Ashjaei <mohammad.ashjaei@mdh.se>
+% This code is written in order to simulate switched Ethernet protocols.
+%---------------------------------------------------------------------
+
+
 function [message_id, queue] = get_next(queue, element_number)
 % This function returns the next message id in the queue by defining the
 % queue element number

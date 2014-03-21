@@ -1,3 +1,8 @@
+%---------------------------------------------------------------------
+% Copyright 2013 Mohammad Ashjaei <mohammad.ashjaei@mdh.se>
+% This code is written in order to simulate switched Ethernet protocols.
+%---------------------------------------------------------------------
+
 % Define the message struct manually (example)
 % Note: in the SwitchInRout and SwitchPort members the destination switch
 % is excluded and the port shows the output port connected to the next

@@ -1,3 +1,8 @@
+%---------------------------------------------------------------------
+% Copyright 2013 Mohammad Ashjaei <mohammad.ashjaei@mdh.se>
+% This code is written in order to simulate switched Ethernet protocols.
+%---------------------------------------------------------------------
+
 function [queue] = remove_from_queue(queue, message_id)
 % This function remove a message from a queue and re-sort the queue again
 % based on the priority

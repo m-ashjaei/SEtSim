@@ -1,3 +1,8 @@
+%---------------------------------------------------------------------
+% Copyright 2013 Mohammad Ashjaei <mohammad.ashjaei@mdh.se>
+% This code is written in order to simulate switched Ethernet protocols.
+%---------------------------------------------------------------------
+
 function [queue] = insert_to_ascend(queue, message_id)
 % This function insert a message in a queue and sort the queue ascending
 % based on the priority

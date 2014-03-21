@@ -1,3 +1,9 @@
+%---------------------------------------------------------------------
+% Copyright 2013 Mohammad Ashjaei <mohammad.ashjaei@mdh.se>
+% This code is written in order to simulate switched Ethernet protocols.
+%---------------------------------------------------------------------
+
+
 % This m file contains the global variables related to network and
 % messages. the varibales may be changed if model is changed.
 

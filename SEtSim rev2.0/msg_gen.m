@@ -1,3 +1,9 @@
+%---------------------------------------------------------------------
+% Copyright 2013 Mohammad Ashjaei <mohammad.ashjaei@mdh.se>
+% This code is written in order to simulate switched Ethernet protocols.
+%---------------------------------------------------------------------
+
+
 % this function generates the messages the same as the AFDX (military)
 
 function [message_nbr, message] = msg_gen(EC)

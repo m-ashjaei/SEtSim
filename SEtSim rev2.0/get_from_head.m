@@ -1,3 +1,8 @@
+%---------------------------------------------------------------------
+% Copyright 2013 Mohammad Ashjaei <mohammad.ashjaei@mdh.se>
+% This code is written in order to simulate switched Ethernet protocols.
+%---------------------------------------------------------------------
+
 function [message_id, queue] = get_from_head(queue)
 % This function returns the message id which is in the head of the queue
 
