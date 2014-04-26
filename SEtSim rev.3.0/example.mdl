@@ -1,0 +1,2476 @@
+Model {
+  Name			  "example"
+  Version		  7.8
+  MdlSubVersion		  0
+  GraphicalInterface {
+    NumRootInports	    0
+    NumRootOutports	    0
+    ParameterArgumentNames  ""
+    ComputedModelVersion    "1.660"
+    NumModelReferences	    0
+    NumTestPointedSignals   0
+  }
+  SavedCharacterEncoding  "windows-1252"
+  slprops.hdlmdlprops {
+    $PropName		    "HDLParams"
+    $ObjectID		    1
+    Array {
+      Type		      "Cell"
+      Dimension		      2
+      Cell		      "HDLSubsystem"
+      Cell		      "ftt_se_sim"
+      PropName		      "mdlProps"
+    }
+  }
+  SaveDefaultBlockParams  on
+  ScopeRefreshTime	  0.035000
+  OverrideScopeRefreshTime on
+  DisableAllScopes	  off
+  DataTypeOverride	  "UseLocalSettings"
+  DataTypeOverrideAppliesTo "AllNumericTypes"
+  MinMaxOverflowLogging	  "UseLocalSettings"
+  MinMaxOverflowArchiveMode "Overwrite"
+  FPTRunName		  "Run 1"
+  MaxMDLFileLineLength	  120
+  Created		  "Tue Jan 31 10:40:14 2012"
+  Creator		  "mohammad"
+  UpdateHistory		  "UpdateHistoryNever"
+  ModifiedByFormat	  "%<Auto>"
+  LastModifiedBy	  "mai03"
+  ModifiedDateFormat	  "%<Auto>"
+  LastModifiedDate	  "Wed Nov 06 16:39:56 2013"
+  RTWModifiedTimeStamp	  305656639
+  ModelVersionFormat	  "1.%<AutoIncrement:660>"
+  ConfigurationManager	  "None"
+  SampleTimeColors	  off
+  SampleTimeAnnotations	  off
+  LibraryLinkDisplay	  "none"
+  WideLines		  off
+  ShowLineDimensions	  off
+  ShowPortDataTypes	  off
+  ShowDesignRanges	  off
+  ShowLoopsOnError	  on
+  IgnoreBidirectionalLines off
+  ShowStorageClass	  off
+  ShowTestPointIcons	  on
+  ShowSignalResolutionIcons on
+  ShowViewerIcons	  on
+  SortedOrder		  on
+  ExecutionContextIcon	  off
+  ShowLinearizationAnnotations on
+  BlockNameDataTip	  off
+  BlockParametersDataTip  off
+  BlockDescriptionStringDataTip	off
+  ToolBar		  on
+  StatusBar		  on
+  BrowserShowLibraryLinks off
+  BrowserLookUnderMasks	  off
+  SimulationMode	  "normal"
+  LinearizationMsg	  "none"
+  Profile		  off
+  ParamWorkspaceSource	  "MATLABWorkspace"
+  AccelSystemTargetFile	  "accel.tlc"
+  AccelTemplateMakefile	  "accel_default_tmf"
+  AccelMakeCommand	  "make_rtw"
+  TryForcingSFcnDF	  off
+  Object {
+    $PropName		    "DataLoggingOverride"
+    $ObjectID		    2
+    $ClassName		    "Simulink.SimulationData.ModelLoggingInfo"
+    model_		    "test_mdl"
+    overrideMode_	    [0.0]
+    Array {
+      Type		      "Cell"
+      Dimension		      1
+      Cell		      "test_mdl"
+      PropName		      "logAsSpecifiedByModels_"
+    }
+    Array {
+      Type		      "Cell"
+      Dimension		      1
+      Cell		      []
+      PropName		      "logAsSpecifiedByModelsSSIDs_"
+    }
+  }
+  RecordCoverage	  off
+  CovPath		  "/"
+  CovSaveName		  "covdata"
+  CovMetricSettings	  "dw"
+  CovNameIncrementing	  off
+  CovHtmlReporting	  on
+  CovForceBlockReductionOff on
+  covSaveCumulativeToWorkspaceVar on
+  CovSaveSingleToWorkspaceVar on
+  CovCumulativeVarName	  "covCumulativeData"
+  CovCumulativeReport	  off
+  CovReportOnPause	  on
+  CovModelRefEnable	  "Off"
+  CovExternalEMLEnable	  off
+  ExtModeBatchMode	  off
+  ExtModeEnableFloating	  on
+  ExtModeTrigType	  "manual"
+  ExtModeTrigMode	  "normal"
+  ExtModeTrigPort	  "1"
+  ExtModeTrigElement	  "any"
+  ExtModeTrigDuration	  1000
+  ExtModeTrigDurationFloating "auto"
+  ExtModeTrigHoldOff	  0
+  ExtModeTrigDelay	  0
+  ExtModeTrigDirection	  "rising"
+  ExtModeTrigLevel	  0
+  ExtModeArchiveMode	  "off"
+  ExtModeAutoIncOneShot	  off
+  ExtModeIncDirWhenArm	  off
+  ExtModeAddSuffixToVar	  off
+  ExtModeWriteAllDataToWs off
+  ExtModeArmWhenConnect	  on
+  ExtModeSkipDownloadWhenConnect off
+  ExtModeLogAll		  on
+  ExtModeAutoUpdateStatusClock on
+  BufferReuse		  on
+  ShowModelReferenceBlockVersion off
+  ShowModelReferenceBlockIO off
+  Array {
+    Type		    "Handle"
+    Dimension		    1
+    Simulink.ConfigSet {
+      $ObjectID		      3
+      Version		      "1.11.1"
+      Array {
+	Type			"Handle"
+	Dimension		9
+	Simulink.SolverCC {
+	  $ObjectID		  4
+	  Version		  "1.11.1"
+	  StartTime		  "0.0"
+	  StopTime		  "inf"
+	  AbsTol		  "auto"
+	  FixedStep		  "0.1"
+	  InitialStep		  "auto"
+	  MaxNumMinSteps	  "-1"
+	  MaxOrder		  5
+	  ZcThreshold		  "auto"
+	  ConsecutiveZCsStepRelTol "10*128*eps"
+	  MaxConsecutiveZCs	  "1000"
+	  ExtrapolationOrder	  4
+	  NumberNewtonIterations  1
+	  MaxStep		  "0.005"
+	  MinStep		  "0.005"
+	  MaxConsecutiveMinStep	  "1"
+	  RelTol		  "1e-12"
+	  SolverMode		  "Auto"
+	  ConcurrentTasks	  off
+	  Solver		  "ode45"
+	  SolverName		  "ode45"
+	  SolverJacobianMethodControl "auto"
+	  ShapePreserveControl	  "DisableAll"
+	  ZeroCrossControl	  "UseLocalSettings"
+	  ZeroCrossAlgorithm	  "Nonadaptive"
+	  AlgebraicLoopSolver	  "TrustRegion"
+	  SolverResetMethod	  "Fast"
+	  PositivePriorityOrder	  off
+	  AutoInsertRateTranBlk	  off
+	  SampleTimeConstraint	  "Unconstrained"
+	  InsertRTBMode		  "Whenever possible"
+	}
+	Simulink.DataIOCC {
+	  $ObjectID		  5
+	  Version		  "1.11.1"
+	  Decimation		  "1"
+	  ExternalInput		  "[t, u]"
+	  FinalStateName	  "xFinal"
+	  InitialState		  "xInitial"
+	  LimitDataPoints	  on
+	  MaxDataPoints		  "1000"
+	  LoadExternalInput	  off
+	  LoadInitialState	  off
+	  SaveFinalState	  off
+	  SaveCompleteFinalSimState off
+	  SaveFormat		  "Array"
+	  SignalLoggingSaveFormat "ModelDataLogs"
+	  SaveOutput		  on
+	  SaveState		  off
+	  SignalLogging		  on
+	  DSMLogging		  on
+	  InspectSignalLogs	  off
+	  SaveTime		  on
+	  ReturnWorkspaceOutputs  off
+	  StateSaveName		  "xout"
+	  TimeSaveName		  "tout"
+	  OutputSaveName	  "yout"
+	  SignalLoggingName	  "logsout"
+	  DSMLoggingName	  "dsmout"
+	  OutputOption		  "RefineOutputTimes"
+	  OutputTimes		  "[]"
+	  ReturnWorkspaceOutputsName "out"
+	  Refine		  "1"
+	}
+	Simulink.OptimizationCC {
+	  $ObjectID		  6
+	  Version		  "1.11.1"
+	  Array {
+	    Type		    "Cell"
+	    Dimension		    8
+	    Cell		    "BooleansAsBitfields"
+	    Cell		    "PassReuseOutputArgsAs"
+	    Cell		    "PassReuseOutputArgsThreshold"
+	    Cell		    "ZeroExternalMemoryAtStartup"
+	    Cell		    "ZeroInternalMemoryAtStartup"
+	    Cell		    "OptimizeModelRefInitCode"
+	    Cell		    "NoFixptDivByZeroProtection"
+	    Cell		    "UseSpecifiedMinMax"
+	    PropName		    "DisabledProps"
+	  }
+	  BlockReduction	  on
+	  BooleanDataType	  on
+	  ConditionallyExecuteInputs on
+	  InlineParams		  off
+	  UseIntDivNetSlope	  off
+	  UseFloatMulNetSlope	  off
+	  UseSpecifiedMinMax	  off
+	  InlineInvariantSignals  off
+	  OptimizeBlockIOStorage  on
+	  BufferReuse		  on
+	  EnhancedBackFolding	  off
+	  StrengthReduction	  off
+	  ExpressionFolding	  on
+	  BooleansAsBitfields	  off
+	  BitfieldContainerType	  "uint_T"
+	  EnableMemcpy		  on
+	  MemcpyThreshold	  64
+	  PassReuseOutputArgsAs	  "Structure reference"
+	  ExpressionDepthLimit	  2147483647
+	  FoldNonRolledExpr	  on
+	  LocalBlockOutputs	  on
+	  RollThreshold		  5
+	  SystemCodeInlineAuto	  off
+	  StateBitsets		  off
+	  DataBitsets		  off
+	  UseTempVars		  off
+	  ZeroExternalMemoryAtStartup on
+	  ZeroInternalMemoryAtStartup on
+	  InitFltsAndDblsToZero	  off
+	  NoFixptDivByZeroProtection off
+	  EfficientFloat2IntCast  off
+	  EfficientMapNaN2IntZero on
+	  OptimizeModelRefInitCode off
+	  LifeSpan		  "inf"
+	  MaxStackSize		  "Inherit from target"
+	  BufferReusableBoundary  on
+	  SimCompilerOptimization "Off"
+	  AccelVerboseBuild	  off
+	  AccelParallelForEachSubsystem	on
+	}
+	Simulink.DebuggingCC {
+	  $ObjectID		  7
+	  Version		  "1.11.1"
+	  RTPrefix		  "error"
+	  ConsistencyChecking	  "none"
+	  ArrayBoundsChecking	  "none"
+	  SignalInfNanChecking	  "none"
+	  SignalRangeChecking	  "none"
+	  ReadBeforeWriteMsg	  "UseLocalSettings"
+	  WriteAfterWriteMsg	  "UseLocalSettings"
+	  WriteAfterReadMsg	  "UseLocalSettings"
+	  AlgebraicLoopMsg	  "warning"
+	  ArtificialAlgebraicLoopMsg "warning"
+	  SaveWithDisabledLinksMsg "warning"
+	  SaveWithParameterizedLinksMsg	"warning"
+	  CheckSSInitialOutputMsg on
+	  UnderspecifiedInitializationDetection	"Classic"
+	  MergeDetectMultiDrivingBlocksExec "none"
+	  CheckExecutionContextPreStartOutputMsg off
+	  CheckExecutionContextRuntimeOutputMsg	off
+	  SignalResolutionControl "UseLocalSettings"
+	  BlockPriorityViolationMsg "warning"
+	  MinStepSizeMsg	  "warning"
+	  TimeAdjustmentMsg	  "none"
+	  MaxConsecutiveZCsMsg	  "error"
+	  MaskedZcDiagnostic	  "warning"
+	  IgnoredZcDiagnostic	  "warning"
+	  SolverPrmCheckMsg	  "none"
+	  InheritedTsInSrcMsg	  "warning"
+	  DiscreteInheritContinuousMsg "warning"
+	  MultiTaskDSMMsg	  "error"
+	  MultiTaskCondExecSysMsg "error"
+	  MultiTaskRateTransMsg	  "error"
+	  SingleTaskRateTransMsg  "none"
+	  TasksWithSamePriorityMsg "warning"
+	  SigSpecEnsureSampleTimeMsg "warning"
+	  CheckMatrixSingularityMsg "none"
+	  IntegerOverflowMsg	  "warning"
+	  Int32ToFloatConvMsg	  "warning"
+	  ParameterDowncastMsg	  "error"
+	  ParameterOverflowMsg	  "error"
+	  ParameterUnderflowMsg	  "none"
+	  ParameterPrecisionLossMsg "warning"
+	  ParameterTunabilityLossMsg "warning"
+	  FixptConstUnderflowMsg  "none"
+	  FixptConstOverflowMsg	  "none"
+	  FixptConstPrecisionLossMsg "none"
+	  UnderSpecifiedDataTypeMsg "none"
+	  UnnecessaryDatatypeConvMsg "none"
+	  VectorMatrixConversionMsg "none"
+	  InvalidFcnCallConnMsg	  "error"
+	  FcnCallInpInsideContextMsg "Use local settings"
+	  SignalLabelMismatchMsg  "none"
+	  UnconnectedInputMsg	  "none"
+	  UnconnectedOutputMsg	  "none"
+	  UnconnectedLineMsg	  "none"
+	  SFcnCompatibilityMsg	  "none"
+	  FrameProcessingCompatibilityMsg "warning"
+	  UniqueDataStoreMsg	  "none"
+	  BusObjectLabelMismatch  "warning"
+	  RootOutportRequireBusObject "warning"
+	  AssertControl		  "UseLocalSettings"
+	  EnableOverflowDetection off
+	  ModelReferenceIOMsg	  "none"
+	  ModelReferenceMultiInstanceNormalModeStructChecksumCheck "error"
+	  ModelReferenceVersionMismatchMessage "none"
+	  ModelReferenceIOMismatchMessage "none"
+	  ModelReferenceCSMismatchMessage "none"
+	  UnknownTsInhSupMsg	  "warning"
+	  ModelReferenceDataLoggingMessage "warning"
+	  ModelReferenceSymbolNameMessage "warning"
+	  ModelReferenceExtraNoncontSigs "error"
+	  StateNameClashWarn	  "warning"
+	  SimStateInterfaceChecksumMismatchMsg "warning"
+	  SimStateOlderReleaseMsg "error"
+	  InitInArrayFormatMsg	  "warning"
+	  StrictBusMsg		  "ErrorLevel1"
+	  BusNameAdapt		  "WarnAndRepair"
+	  NonBusSignalsTreatedAsBus "none"
+	  LoggingUnavailableSignals "error"
+	  BlockIODiagnostic	  "none"
+	  SFUnusedDataAndEventsDiag "warning"
+	  SFUnexpectedBacktrackingDiag "warning"
+	  SFInvalidInputDataAccessInChartInitDiag "warning"
+	  SFNoUnconditionalDefaultTransitionDiag "warning"
+	  SFTransitionOutsideNaturalParentDiag "warning"
+	  SFUnconditionalTransitionShadowingDiag "warning"
+	}
+	Simulink.HardwareCC {
+	  $ObjectID		  8
+	  Version		  "1.11.1"
+	  ProdBitPerChar	  8
+	  ProdBitPerShort	  16
+	  ProdBitPerInt		  32
+	  ProdBitPerLong	  32
+	  ProdBitPerFloat	  32
+	  ProdBitPerDouble	  64
+	  ProdBitPerPointer	  32
+	  ProdLargestAtomicInteger "Char"
+	  ProdLargestAtomicFloat  "None"
+	  ProdIntDivRoundTo	  "Undefined"
+	  ProdEndianess		  "Unspecified"
+	  ProdWordSize		  32
+	  ProdShiftRightIntArith  on
+	  ProdHWDeviceType	  "32-bit Generic"
+	  TargetBitPerChar	  8
+	  TargetBitPerShort	  16
+	  TargetBitPerInt	  32
+	  TargetBitPerLong	  32
+	  TargetBitPerFloat	  32
+	  TargetBitPerDouble	  64
+	  TargetBitPerPointer	  32
+	  TargetLargestAtomicInteger "Char"
+	  TargetLargestAtomicFloat "None"
+	  TargetShiftRightIntArith on
+	  TargetIntDivRoundTo	  "Undefined"
+	  TargetEndianess	  "Unspecified"
+	  TargetWordSize	  32
+	  TargetTypeEmulationWarnSuppressLevel 0
+	  TargetPreprocMaxBitsSint 32
+	  TargetPreprocMaxBitsUint 32
+	  TargetHWDeviceType	  "Specified"
+	  TargetUnknown		  off
+	  ProdEqTarget		  on
+	}
+	Simulink.ModelReferenceCC {
+	  $ObjectID		  9
+	  Version		  "1.11.1"
+	  UpdateModelReferenceTargets "IfOutOfDateOrStructuralChange"
+	  CheckModelReferenceTargetMessage "error"
+	  EnableParallelModelReferenceBuilds off
+	  ParallelModelReferenceErrorOnInvalidPool on
+	  ParallelModelReferenceMATLABWorkerInit "None"
+	  ModelReferenceNumInstancesAllowed "Multi"
+	  PropagateVarSize	  "Infer from blocks in model"
+	  ModelReferencePassRootInputsByReference on
+	  ModelReferenceMinAlgLoopOccurrences off
+	  PropagateSignalLabelsOutOfModel off
+	  SupportModelReferenceSimTargetCustomCode off
+	}
+	Simulink.SFSimCC {
+	  $ObjectID		  10
+	  Version		  "1.11.1"
+	  SFSimEnableDebug	  on
+	  SFSimOverflowDetection  on
+	  SFSimEcho		  on
+	  SimBlas		  on
+	  SimCtrlC		  on
+	  SimExtrinsic		  on
+	  SimIntegrity		  on
+	  SimUseLocalCustomCode	  off
+	  SimParseCustomCode	  on
+	  SimBuildMode		  "sf_incremental_build"
+	}
+	Simulink.RTWCC {
+	  $BackupClass		  "Simulink.RTWCC"
+	  $ObjectID		  11
+	  Version		  "1.11.1"
+	  Array {
+	    Type		    "Cell"
+	    Dimension		    8
+	    Cell		    "IncludeHyperlinkInReport"
+	    Cell		    "GenerateTraceInfo"
+	    Cell		    "GenerateTraceReport"
+	    Cell		    "GenerateTraceReportSl"
+	    Cell		    "GenerateTraceReportSf"
+	    Cell		    "GenerateTraceReportEml"
+	    Cell		    "GenerateSLWebview"
+	    Cell		    "GenerateCodeMetricsReport"
+	    PropName		    "DisabledProps"
+	  }
+	  SystemTargetFile	  "grt.tlc"
+	  GenCodeOnly		  off
+	  MakeCommand		  "make_rtw"
+	  GenerateMakefile	  on
+	  TemplateMakefile	  "grt_default_tmf"
+	  GenerateReport	  off
+	  SaveLog		  off
+	  RTWVerbose		  on
+	  RetainRTWFile		  off
+	  ProfileTLC		  off
+	  TLCDebug		  off
+	  TLCCoverage		  off
+	  TLCAssert		  off
+	  ProcessScriptMode	  "Default"
+	  ConfigurationMode	  "Optimized"
+	  ConfigAtBuild		  off
+	  RTWUseLocalCustomCode	  off
+	  RTWUseSimCustomCode	  off
+	  IncludeHyperlinkInReport off
+	  LaunchReport		  off
+	  TargetLang		  "C"
+	  IncludeBusHierarchyInRTWFileBlockHierarchyMap	off
+	  IncludeERTFirstTime	  off
+	  GenerateTraceInfo	  off
+	  GenerateTraceReport	  off
+	  GenerateTraceReportSl	  off
+	  GenerateTraceReportSf	  off
+	  GenerateTraceReportEml  off
+	  GenerateCodeInfo	  off
+	  GenerateSLWebview	  off
+	  GenerateCodeMetricsReport off
+	  RTWCompilerOptimization "Off"
+	  CheckMdlBeforeBuild	  "Off"
+	  CustomRebuildMode	  "OnUpdate"
+	  Array {
+	    Type		    "Handle"
+	    Dimension		    2
+	    Simulink.CodeAppCC {
+	      $ObjectID		      12
+	      Version		      "1.11.1"
+	      Array {
+		Type			"Cell"
+		Dimension		21
+		Cell			"IgnoreCustomStorageClasses"
+		Cell			"IgnoreTestpoints"
+		Cell			"InsertBlockDesc"
+		Cell			"InsertPolySpaceComments"
+		Cell			"SFDataObjDesc"
+		Cell			"MATLABFcnDesc"
+		Cell			"SimulinkDataObjDesc"
+		Cell			"DefineNamingRule"
+		Cell			"SignalNamingRule"
+		Cell			"ParamNamingRule"
+		Cell			"InlinedPrmAccess"
+		Cell			"CustomSymbolStr"
+		Cell			"CustomSymbolStrGlobalVar"
+		Cell			"CustomSymbolStrType"
+		Cell			"CustomSymbolStrField"
+		Cell			"CustomSymbolStrFcn"
+		Cell			"CustomSymbolStrFcnArg"
+		Cell			"CustomSymbolStrBlkIO"
+		Cell			"CustomSymbolStrTmpVar"
+		Cell			"CustomSymbolStrMacro"
+		Cell			"ReqsInCode"
+		PropName		"DisabledProps"
+	      }
+	      ForceParamTrailComments off
+	      GenerateComments	      on
+	      IgnoreCustomStorageClasses on
+	      IgnoreTestpoints	      off
+	      IncHierarchyInIds	      off
+	      MaxIdLength	      31
+	      PreserveName	      off
+	      PreserveNameWithParent  off
+	      ShowEliminatedStatement off
+	      IncAutoGenComments      off
+	      SimulinkDataObjDesc     off
+	      SFDataObjDesc	      off
+	      MATLABFcnDesc	      off
+	      IncDataTypeInIds	      off
+	      MangleLength	      1
+	      CustomSymbolStrGlobalVar "$R$N$M"
+	      CustomSymbolStrType     "$N$R$M"
+	      CustomSymbolStrField    "$N$M"
+	      CustomSymbolStrFcn      "$R$N$M$F"
+	      CustomSymbolStrFcnArg   "rt$I$N$M"
+	      CustomSymbolStrBlkIO    "rtb_$N$M"
+	      CustomSymbolStrTmpVar   "$N$M"
+	      CustomSymbolStrMacro    "$R$N$M"
+	      DefineNamingRule	      "None"
+	      ParamNamingRule	      "None"
+	      SignalNamingRule	      "None"
+	      InsertBlockDesc	      off
+	      InsertPolySpaceComments off
+	      SimulinkBlockComments   on
+	      MATLABSourceComments    off
+	      EnableCustomComments    off
+	      InlinedPrmAccess	      "Literals"
+	      ReqsInCode	      off
+	      UseSimReservedNames     off
+	    }
+	    Simulink.GRTTargetCC {
+	      $BackupClass	      "Simulink.TargetCC"
+	      $ObjectID		      13
+	      Version		      "1.11.1"
+	      Array {
+		Type			"Cell"
+		Dimension		16
+		Cell			"GeneratePreprocessorConditionals"
+		Cell			"IncludeMdlTerminateFcn"
+		Cell			"CombineOutputUpdateFcns"
+		Cell			"SuppressErrorStatus"
+		Cell			"ERTCustomFileBanners"
+		Cell			"GenerateSampleERTMain"
+		Cell			"GenerateTestInterfaces"
+		Cell			"ModelStepFunctionPrototypeControlCompliant"
+		Cell			"CPPClassGenCompliant"
+		Cell			"MultiInstanceERTCode"
+		Cell			"PurelyIntegerCode"
+		Cell			"SupportComplex"
+		Cell			"SupportAbsoluteTime"
+		Cell			"SupportContinuousTime"
+		Cell			"SupportNonInlinedSFcns"
+		Cell			"PortableWordSizes"
+		PropName		"DisabledProps"
+	      }
+	      TargetFcnLib	      "ansi_tfl_table_tmw.mat"
+	      TargetLibSuffix	      ""
+	      TargetPreCompLibLocation ""
+	      TargetFunctionLibrary   "ANSI_C"
+	      UtilityFuncGeneration   "Auto"
+	      ERTMultiwordTypeDef     "System defined"
+	      CodeExecutionProfiling  off
+	      ERTMultiwordLength      256
+	      MultiwordLength	      2048
+	      GenerateFullHeader      on
+	      GenerateSampleERTMain   off
+	      GenerateTestInterfaces  off
+	      IsPILTarget	      off
+	      ModelReferenceCompliant on
+	      ParMdlRefBuildCompliant on
+	      CompOptLevelCompliant   on
+	      ConcurrentExecutionCompliant on
+	      IncludeMdlTerminateFcn  on
+	      GeneratePreprocessorConditionals "Disable all"
+	      CombineOutputUpdateFcns off
+	      CombineSignalStateStructs	off
+	      SuppressErrorStatus     off
+	      ERTFirstTimeCompliant   off
+	      IncludeFileDelimiter    "Auto"
+	      ERTCustomFileBanners    off
+	      SupportAbsoluteTime     on
+	      LogVarNameModifier      "rt_"
+	      MatFileLogging	      on
+	      MultiInstanceERTCode    off
+	      SupportNonFinite	      on
+	      SupportComplex	      on
+	      PurelyIntegerCode	      off
+	      SupportContinuousTime   on
+	      SupportNonInlinedSFcns  on
+	      SupportVariableSizeSignals off
+	      EnableShiftOperators    on
+	      ParenthesesLevel	      "Nominal"
+	      PortableWordSizes	      off
+	      ModelStepFunctionPrototypeControlCompliant off
+	      CPPClassGenCompliant    off
+	      AutosarCompliant	      off
+	      UseMalloc		      off
+	      ExtMode		      off
+	      ExtModeStaticAlloc      off
+	      ExtModeTesting	      off
+	      ExtModeStaticAllocSize  1000000
+	      ExtModeTransport	      0
+	      ExtModeMexFile	      "ext_comm"
+	      ExtModeIntrfLevel	      "Level1"
+	      RTWCAPISignals	      off
+	      RTWCAPIParams	      off
+	      RTWCAPIStates	      off
+	      RTWCAPIRootIO	      off
+	      GenerateASAP2	      off
+	    }
+	    PropName		    "Components"
+	  }
+	}
+	hdlcoderui.hdlcc {
+	  $ObjectID		  14
+	  Version		  "1.11.1"
+	  Description		  "HDL Coder custom configuration component"
+	  Name			  "HDL Coder"
+	}
+	PropName		"Components"
+      }
+      Name		      "Configuration"
+      CurrentDlgPage	      "Solver"
+      ConfigPrmDlgPosition     [ 464, 16, 1457, 1012 ] 
+    }
+    PropName		    "ConfigurationSets"
+  }
+  Simulink.ConfigSet {
+    $PropName		    "ActiveConfigurationSet"
+    $ObjectID		    3
+  }
+  BlockDefaults {
+    ForegroundColor	    "black"
+    BackgroundColor	    "white"
+    DropShadow		    off
+    NamePlacement	    "normal"
+    FontName		    "Helvetica"
+    FontSize		    10
+    FontWeight		    "normal"
+    FontAngle		    "normal"
+    ShowName		    on
+    BlockRotation	    0
+    BlockMirror		    off
+  }
+  AnnotationDefaults {
+    HorizontalAlignment	    "center"
+    VerticalAlignment	    "middle"
+    ForegroundColor	    "black"
+    BackgroundColor	    "white"
+    DropShadow		    off
+    FontName		    "Helvetica"
+    FontSize		    10
+    FontWeight		    "normal"
+    FontAngle		    "normal"
+    UseDisplayTextAsClickCallback off
+  }
+  LineDefaults {
+    FontName		    "Helvetica"
+    FontSize		    9
+    FontWeight		    "normal"
+    FontAngle		    "normal"
+  }
+  BlockParameterDefaults {
+    Block {
+      BlockType		      Inport
+      Port		      "1"
+      OutputFunctionCall      off
+      OutMin		      "[]"
+      OutMax		      "[]"
+      OutDataTypeStr	      "Inherit: auto"
+      LockScale		      off
+      BusOutputAsStruct	      off
+      PortDimensions	      "-1"
+      VarSizeSig	      "Inherit"
+      SampleTime	      "-1"
+      SignalType	      "auto"
+      SamplingMode	      "auto"
+      LatchByDelayingOutsideSignal off
+      LatchInputForFeedbackSignals off
+      Interpolate	      on
+    }
+    Block {
+      BlockType		      M-S-Function
+      FunctionName	      "matlabfile"
+      DisplayMFileStacktrace  on
+    }
+    Block {
+      BlockType		      Outport
+      Port		      "1"
+      OutMin		      "[]"
+      OutMax		      "[]"
+      OutDataTypeStr	      "Inherit: auto"
+      LockScale		      off
+      BusOutputAsStruct	      off
+      PortDimensions	      "-1"
+      VarSizeSig	      "Inherit"
+      SampleTime	      "-1"
+      SignalType	      "auto"
+      SamplingMode	      "auto"
+      SourceOfInitialOutputValue "Dialog"
+      OutputWhenDisabled      "held"
+      InitialOutput	      "[]"
+    }
+    Block {
+      BlockType		      Scope
+      ModelBased	      off
+      TickLabels	      "OneTimeTick"
+      ZoomMode		      "on"
+      Grid		      "on"
+      TimeRange		      "auto"
+      YMin		      "-5"
+      YMax		      "5"
+      SaveToWorkspace	      off
+      SaveName		      "ScopeData"
+      LimitDataPoints	      on
+      MaxDataPoints	      "5000"
+      Decimation	      "1"
+      SampleInput	      off
+      SampleTime	      "-1"
+    }
+    Block {
+      BlockType		      SignalViewerScope
+      Floating		      off
+      ModelBased	      off
+      TickLabels	      "OneTimeTick"
+      ZoomMode		      "on"
+      Grid		      "on"
+      TimeRange		      "auto"
+      YMin		      "-5"
+      YMax		      "5"
+      SaveToWorkspace	      off
+      SaveName		      "ScopeData"
+      LimitDataPoints	      on
+      MaxDataPoints	      "5000"
+      Decimation	      "1"
+      SampleInput	      off
+      SampleTime	      "0"
+      Disabled		      off
+      ScrollMode	      on
+    }
+    Block {
+      BlockType		      SubSystem
+      ShowPortLabels	      "FromPortIcon"
+      Permissions	      "ReadWrite"
+      PermitHierarchicalResolution "All"
+      TreatAsAtomicUnit	      off
+      CheckFcnCallInpInsideContextMsg off
+      SystemSampleTime	      "-1"
+      RTWFcnNameOpts	      "Auto"
+      RTWFileNameOpts	      "Auto"
+      RTWMemSecFuncInitTerm   "Inherit from model"
+      RTWMemSecFuncExecute    "Inherit from model"
+      RTWMemSecDataConstants  "Inherit from model"
+      RTWMemSecDataInternal   "Inherit from model"
+      RTWMemSecDataParameters "Inherit from model"
+      SimViewingDevice	      off
+      DataTypeOverride	      "UseLocalSettings"
+      DataTypeOverrideAppliesTo	"AllNumericTypes"
+      MinMaxOverflowLogging   "UseLocalSettings"
+      SFBlockType	      "NONE"
+      Variant		      off
+      GeneratePreprocessorConditionals off
+    }
+  }
+  System {
+    Name		    "example"
+    Location		    [547, 300, 1145, 680]
+    Open		    on
+    ModelBrowserVisibility  off
+    ModelBrowserWidth	    200
+    ScreenColor		    "white"
+    PaperOrientation	    "landscape"
+    PaperPositionMode	    "auto"
+    PaperType		    "usletter"
+    PaperUnits		    "inches"
+    TiledPaperMargins	    [0.500000, 0.500000, 0.500000, 0.500000]
+    TiledPageScale	    1
+    ShowPageBoundaries	    off
+    ZoomFactor		    "100"
+    ReportName		    "simulink-default.rpt"
+    SIDHighWatermark	    "1646"
+    Block {
+      BlockType		      SubSystem
+      Name		      "root sub-network"
+      SID		      "161"
+      Ports		      [2, 2]
+      Position		      [225, 15, 350, 135]
+      FontName		      "Arial Narrow"
+      FontWeight	      "bold"
+      MinAlgLoopOccurrences   off
+      PropExecContextOutsideSubsystem off
+      RTWSystemCode	      "Auto"
+      FunctionWithSeparateData off
+      Opaque		      off
+      RequestExecContextInheritance off
+      MaskHideContents	      off
+      System {
+	Name			"root sub-network"
+	Location		[515, 265, 1253, 742]
+	Open			off
+	ModelBrowserVisibility	off
+	ModelBrowserWidth	200
+	ScreenColor		"white"
+	PaperOrientation	"landscape"
+	PaperPositionMode	"auto"
+	PaperType		"usletter"
+	PaperUnits		"inches"
+	TiledPaperMargins	[0.500000, 0.500000, 0.500000, 0.500000]
+	TiledPageScale		1
+	ShowPageBoundaries	off
+	ZoomFactor		"100"
+	Block {
+	  BlockType		  Inport
+	  Name			  "seg1_in"
+	  SID			  "165"
+	  Position		  [180, 133, 210, 147]
+	  NamePlacement		  "alternate"
+	  FontName		  "Arial"
+	  FontWeight		  "bold"
+	  IconDisplay		  "Port number"
+	}
+	Block {
+	  BlockType		  Inport
+	  Name			  "seg2_in"
+	  SID			  "168"
+	  Position		  [140, 148, 170, 162]
+	  FontName		  "Arial"
+	  FontWeight		  "bold"
+	  Port			  "2"
+	  IconDisplay		  "Port number"
+	}
+	Block {
+	  BlockType		  Reference
+	  Name			  "Master"
+	  SID			  "1642"
+	  Ports			  [1, 3]
+	  Position		  [530, 42, 610, 148]
+	  Priority		  "2"
+	  LibraryVersion	  "1.20"
+	  FontName		  "Arial"
+	  FontWeight		  "bold"
+	  SourceBlock		  "model_lib/Master"
+	  SourceType		  ""
+	  master_number		  "1"
+	}
+	Block {
+	  BlockType		  Scope
+	  Name			  "Scope2"
+	  SID			  "1634"
+	  Ports			  [2]
+	  Position		  [530, 230, 560, 265]
+	  FontName		  "Arial"
+	  FontWeight		  "bold"
+	  Floating		  off
+	  Location		  [226, 155, 1506, 866]
+	  Open			  off
+	  NumInputPorts		  "2"
+	  ZoomMode		  "xonly"
+	  List {
+	    ListType		    AxesTitles
+	    axes1		    "%<SignalLabel>"
+	    axes2		    "%<SignalLabel>"
+	  }
+	  List {
+	    ListType		    ScopeGraphics
+	    FigureColor		    "[1 1 1]"
+	    AxesColor		    "[0.8 0.8 0.8]"
+	    AxesTickColor	    "[0 0 0]"
+	    LineColors		    "[0 0 0;0 0 0;0 0 0;0 0 0;0 0 0;0 0 0]"
+	    LineStyles		    "-|-|-|-|-|-"
+	    LineWidths		    "[2 0.5 0.5 0.5 0.5 2]"
+	    MarkerStyles	    "none|none|none|none|none|none"
+	  }
+	  TimeRange		  "0.5"
+	  YMin			  "0~0"
+	  YMax			  "1~1"
+	  SaveName		  "ScopeData1"
+	  DataFormat		  "StructureWithTime"
+	  LimitDataPoints	  off
+	  SampleTime		  "0"
+	}
+	Block {
+	  BlockType		  Scope
+	  Name			  "Scope3"
+	  SID			  "47"
+	  Ports			  [2]
+	  Position		  [675, 85, 705, 120]
+	  FontName		  "Arial"
+	  FontWeight		  "bold"
+	  Floating		  off
+	  Location		  [6, 48, 1286, 759]
+	  Open			  off
+	  NumInputPorts		  "2"
+	  ZoomMode		  "yonly"
+	  List {
+	    ListType		    AxesTitles
+	    axes1		    "%<SignalLabel>"
+	    axes2		    "%<SignalLabel>"
+	  }
+	  List {
+	    ListType		    ScopeGraphics
+	    FigureColor		    "[0.5 0.5 0.5]"
+	    AxesColor		    "[0 0 0]"
+	    AxesTickColor	    "[1 1 1]"
+	    LineColors		    "[1 1 0;1 0 1;0 1 1;1 0 0;0 1 0;0 0 1]"
+	    LineStyles		    "-|-|-|-|-|-"
+	    LineWidths		    "[0.5 0.5 0.5 0.5 0.5 0.5]"
+	    MarkerStyles	    "none|none|none|none|none|none"
+	  }
+	  TimeRange		  "0.5             "
+	  YMin			  "0~0"
+	  YMax			  "1~1"
+	  SaveName		  "ScopeData3"
+	  DataFormat		  "StructureWithTime"
+	  LimitDataPoints	  off
+	  SampleTime		  "0"
+	}
+	Block {
+	  BlockType		  Reference
+	  Name			  "Slave"
+	  SID			  "1643"
+	  Ports			  [1, 3]
+	  Position		  [45, 171, 125, 279]
+	  Priority		  "3"
+	  LibraryVersion	  "1.20"
+	  FontName		  "Arial"
+	  FontWeight		  "bold"
+	  SourceBlock		  "model_lib/Slave"
+	  SourceType		  ""
+	  slave_number		  "1"
+	}
+	Block {
+	  BlockType		  Reference
+	  Name			  "Slave1"
+	  SID			  "1644"
+	  Ports			  [1, 3]
+	  Position		  [45, 336, 125, 444]
+	  Priority		  "3"
+	  LibraryVersion	  "1.20"
+	  FontName		  "Arial"
+	  FontWeight		  "bold"
+	  SourceBlock		  "model_lib/Slave"
+	  SourceType		  ""
+	  slave_number		  "2"
+	}
+	Block {
+	  BlockType		  Reference
+	  Name			  "Slave2"
+	  SID			  "1645"
+	  Ports			  [1, 3]
+	  Position		  [530, 301, 610, 409]
+	  BlockMirror		  on
+	  Priority		  "3"
+	  LibraryVersion	  "1.20"
+	  FontName		  "Arial"
+	  FontWeight		  "bold"
+	  SourceBlock		  "model_lib/Slave"
+	  SourceType		  ""
+	  slave_number		  "3"
+	}
+	Block {
+	  BlockType		  Reference
+	  Name			  "Switch"
+	  SID			  "1641"
+	  Ports			  [16, 16]
+	  Position		  [265, 118, 375, 292]
+	  BackgroundColor	  "yellow"
+	  Priority		  "1"
+	  LibraryVersion	  "1.20"
+	  FontName		  "Arial"
+	  FontWeight		  "bold"
+	  SourceBlock		  "model_lib/Switch"
+	  SourceType		  ""
+	  switch_number		  "1"
+	}
+	Block {
+	  BlockType		  Outport
+	  Name			  "seg1_out"
+	  SID			  "166"
+	  Position		  [445, 133, 475, 147]
+	  NamePlacement		  "alternate"
+	  FontName		  "Arial"
+	  FontWeight		  "bold"
+	  IconDisplay		  "Port number"
+	}
+	Block {
+	  BlockType		  Outport
+	  Name			  "seg2_out"
+	  SID			  "169"
+	  Position		  [480, 148, 510, 162]
+	  FontName		  "Arial"
+	  FontWeight		  "bold"
+	  Port			  "2"
+	  IconDisplay		  "Port number"
+	}
+	Line {
+	  SrcBlock		  "Master"
+	  SrcPort		  2
+	  DstBlock		  "Scope3"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "Master"
+	  SrcPort		  3
+	  Points		  [0, -20]
+	  DstBlock		  "Scope3"
+	  DstPort		  2
+	}
+	Line {
+	  SrcBlock		  "Switch"
+	  SrcPort		  1
+	  Points		  [55, 0; 0, -35]
+	  DstBlock		  "Master"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "Master"
+	  SrcPort		  1
+	  Points		  [35, 0; 0, -45; -415, 0; 0, 115]
+	  DstBlock		  "Switch"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "Slave"
+	  SrcPort		  1
+	  DstBlock		  "Switch"
+	  DstPort		  7
+	}
+	Line {
+	  SrcBlock		  "Slave1"
+	  SrcPort		  1
+	  Points		  [30, 0; 0, -155]
+	  DstBlock		  "Switch"
+	  DstPort		  8
+	}
+	Line {
+	  SrcBlock		  "Slave2"
+	  SrcPort		  1
+	  Points		  [0, 15; -285, 0; 0, -125]
+	  DstBlock		  "Switch"
+	  DstPort		  9
+	}
+	Line {
+	  SrcBlock		  "Switch"
+	  SrcPort		  7
+	  Points		  [85, 0; 0, 120; -450, 0; 0, -85]
+	  DstBlock		  "Slave"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "Switch"
+	  SrcPort		  8
+	  Points		  [75, 0; 0, 120; -440, 0; 0, 70]
+	  DstBlock		  "Slave1"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "Switch"
+	  SrcPort		  9
+	  Points		  [245, 0]
+	  DstBlock		  "Slave2"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "seg2_in"
+	  SrcPort		  1
+	  Points		  [40, 0; 0, 5]
+	  DstBlock		  "Switch"
+	  DstPort		  4
+	}
+	Line {
+	  SrcBlock		  "seg1_in"
+	  SrcPort		  1
+	  Points		  [20, 0; 0, 10]
+	  DstBlock		  "Switch"
+	  DstPort		  3
+	}
+	Line {
+	  SrcBlock		  "Switch"
+	  SrcPort		  3
+	  Points		  [25, 0; 0, -10]
+	  DstBlock		  "seg1_out"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "Switch"
+	  SrcPort		  4
+	  Points		  [45, 0; 0, -5]
+	  DstBlock		  "seg2_out"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "Slave2"
+	  SrcPort		  2
+	  Points		  [-50, 0; 0, -115]
+	  DstBlock		  "Scope2"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "Slave2"
+	  SrcPort		  3
+	  Points		  [-35, 0; 0, -135]
+	  DstBlock		  "Scope2"
+	  DstPort		  2
+	}
+      }
+    }
+    Block {
+      BlockType		      SubSystem
+      Name		      "sub-network 1"
+      SID		      "176"
+      Ports		      [1, 1]
+      Position		      [50, 211, 165, 349]
+      FontName		      "Arial Narrow"
+      FontWeight	      "bold"
+      MinAlgLoopOccurrences   off
+      PropExecContextOutsideSubsystem off
+      RTWSystemCode	      "Auto"
+      FunctionWithSeparateData off
+      Opaque		      off
+      RequestExecContextInheritance off
+      MaskHideContents	      off
+      System {
+	Name			"sub-network 1"
+	Location		[869, 259, 1748, 801]
+	Open			off
+	ModelBrowserVisibility	off
+	ModelBrowserWidth	200
+	ScreenColor		"white"
+	PaperOrientation	"landscape"
+	PaperPositionMode	"auto"
+	PaperType		"usletter"
+	PaperUnits		"inches"
+	TiledPaperMargins	[0.500000, 0.500000, 0.500000, 0.500000]
+	TiledPageScale		1
+	ShowPageBoundaries	off
+	ZoomFactor		"100"
+	Block {
+	  BlockType		  Inport
+	  Name			  "per_in"
+	  SID			  "941"
+	  Position		  [285, 143, 315, 157]
+	  NamePlacement		  "alternate"
+	  FontName		  "Arial"
+	  IconDisplay		  "Port number"
+	}
+	Block {
+	  BlockType		  SubSystem
+	  Name			  "Master1"
+	  SID			  "1619"
+	  Ports			  [1, 3]
+	  Position		  [680, 41, 780, 149]
+	  Priority		  "1"
+	  FontName		  "Arial"
+	  MinAlgLoopOccurrences	  off
+	  PropExecContextOutsideSubsystem off
+	  RTWSystemCode		  "Auto"
+	  FunctionWithSeparateData off
+	  Opaque		  off
+	  RequestExecContextInheritance	off
+	  MaskHideContents	  off
+	  MaskPromptString	  "Master number"
+	  MaskStyleString	  "edit"
+	  MaskVariables		  "master_number=@1;"
+	  MaskTunableValueString  "off"
+	  MaskEnableString	  "on"
+	  MaskVisibilityString	  "on"
+	  MaskToolTipString	  "on"
+	  MaskIconFrame		  on
+	  MaskIconOpaque	  on
+	  MaskIconRotate	  "none"
+	  MaskPortRotate	  "default"
+	  MaskIconUnits		  "autoscale"
+	  MaskValueString	  "2"
+	  System {
+	    Name		    "Master1"
+	    Location		    [89, 445, 406, 627]
+	    Open		    off
+	    ModelBrowserVisibility  off
+	    ModelBrowserWidth	    200
+	    ScreenColor		    "white"
+	    PaperOrientation	    "landscape"
+	    PaperPositionMode	    "auto"
+	    PaperType		    "A4"
+	    PaperUnits		    "centimeters"
+	    TiledPaperMargins	    [1.270000, 1.270000, 1.270000, 1.270000]
+	    TiledPageScale	    1
+	    ShowPageBoundaries	    off
+	    ZoomFactor		    "100"
+	    Block {
+	      BlockType		      Inport
+	      Name		      "M_in"
+	      SID		      "1620"
+	      Position		      [25, 108, 55, 122]
+	      IconDisplay	      "Port number"
+	    }
+	    Block {
+	      BlockType		      M-S-Function
+	      Name		      "Master_in"
+	      SID		      "1621"
+	      Ports		      [1, 1]
+	      Position		      [80, 97, 135, 133]
+	      BackgroundColor	      "yellow"
+	      FunctionName	      "master_in"
+	    }
+	    Block {
+	      BlockType		      M-S-Function
+	      Name		      "Master_out"
+	      SID		      "1622"
+	      Ports		      [0, 2]
+	      Position		      [80, 27, 135, 63]
+	      BackgroundColor	      "yellow"
+	      FunctionName	      "master_out"
+	    }
+	    Block {
+	      BlockType		      Outport
+	      Name		      "M_out"
+	      SID		      "1623"
+	      Position		      [160, 28, 190, 42]
+	      IconDisplay	      "Port number"
+	    }
+	    Block {
+	      BlockType		      Outport
+	      Name		      "scope_in"
+	      SID		      "1624"
+	      Position		      [185, 108, 215, 122]
+	      Port		      "2"
+	      IconDisplay	      "Port number"
+	    }
+	    Block {
+	      BlockType		      Outport
+	      Name		      "scope_out"
+	      SID		      "1625"
+	      Position		      [215, 48, 245, 62]
+	      Port		      "3"
+	      IconDisplay	      "Port number"
+	    }
+	    Line {
+	      SrcBlock		      "Master_out"
+	      SrcPort		      1
+	      DstBlock		      "M_out"
+	      DstPort		      1
+	    }
+	    Line {
+	      SrcBlock		      "M_in"
+	      SrcPort		      1
+	      DstBlock		      "Master_in"
+	      DstPort		      1
+	    }
+	    Line {
+	      SrcBlock		      "Master_in"
+	      SrcPort		      1
+	      DstBlock		      "scope_in"
+	      DstPort		      1
+	    }
+	    Line {
+	      SrcBlock		      "Master_out"
+	      SrcPort		      2
+	      DstBlock		      "scope_out"
+	      DstPort		      1
+	    }
+	  }
+	}
+	Block {
+	  BlockType		  Scope
+	  Name			  "Scope1"
+	  SID			  "1617"
+	  Ports			  [2]
+	  Position		  [255, 75, 285, 110]
+	  FontName		  "Arial"
+	  Floating		  off
+	  Location		  [209, 180, 1489, 891]
+	  Open			  off
+	  NumInputPorts		  "2"
+	  ZoomMode		  "xonly"
+	  List {
+	    ListType		    AxesTitles
+	    axes1		    "%<SignalLabel>"
+	    axes2		    "%<SignalLabel>"
+	  }
+	  List {
+	    ListType		    ScopeGraphics
+	    FigureColor		    "[1 1 1]"
+	    AxesColor		    "[0.8 0.8 0.8]"
+	    AxesTickColor	    "[0 0 0]"
+	    LineColors		    "[0 0 0;1 0 1;0 1 1;1 0 0;0 1 0;0 0 1]"
+	    LineStyles		    "-|-|-|-|-|-"
+	    LineWidths		    "[2 0.5 0.5 0.5 0.5 0.5]"
+	    MarkerStyles	    "none|none|none|none|none|none"
+	  }
+	  TimeRange		  "0.5"
+	  YMin			  "0~0"
+	  YMax			  "1~1"
+	  SaveName		  "ScopeData5"
+	  DataFormat		  "StructureWithTime"
+	  LimitDataPoints	  off
+	  SampleTime		  "0"
+	}
+	Block {
+	  BlockType		  Scope
+	  Name			  "Scope3"
+	  SID			  "1633"
+	  Ports			  [2]
+	  Position		  [430, 65, 460, 100]
+	  FontName		  "Arial"
+	  Floating		  off
+	  Location		  [127, 245, 1407, 956]
+	  Open			  off
+	  NumInputPorts		  "2"
+	  ZoomMode		  "xonly"
+	  List {
+	    ListType		    AxesTitles
+	    axes1		    "%<SignalLabel>"
+	    axes2		    "%<SignalLabel>"
+	  }
+	  List {
+	    ListType		    ScopeGraphics
+	    FigureColor		    "[0.5 0.5 0.5]"
+	    AxesColor		    "[0 0 0]"
+	    AxesTickColor	    "[1 1 1]"
+	    LineColors		    "[1 1 0;1 0 1;0 1 1;1 0 0;0 1 0;0 0 1]"
+	    LineStyles		    "-|-|-|-|-|-"
+	    LineWidths		    "[0.5 0.5 0.5 0.5 0.5 0.5]"
+	    MarkerStyles	    "none|none|none|none|none|none"
+	  }
+	  TimeRange		  "0.5             "
+	  YMin			  "0~0"
+	  YMax			  "1~1"
+	  DataFormat		  "StructureWithTime"
+	  LimitDataPoints	  off
+	  SampleTime		  "0"
+	}
+	Block {
+	  BlockType		  SubSystem
+	  Name			  "Slave1"
+	  SID			  "868"
+	  Ports			  [1, 3]
+	  Position		  [110, 212, 210, 318]
+	  Priority		  "2"
+	  FontName		  "Arial"
+	  MinAlgLoopOccurrences	  off
+	  PropExecContextOutsideSubsystem off
+	  RTWSystemCode		  "Auto"
+	  FunctionWithSeparateData off
+	  Opaque		  off
+	  RequestExecContextInheritance	off
+	  MaskHideContents	  off
+	  MaskPromptString	  "Slave number"
+	  MaskStyleString	  "edit"
+	  MaskVariables		  "slave_number=@1;"
+	  MaskTunableValueString  "off"
+	  MaskEnableString	  "on"
+	  MaskVisibilityString	  "on"
+	  MaskToolTipString	  "on"
+	  MaskIconFrame		  on
+	  MaskIconOpaque	  on
+	  MaskIconRotate	  "none"
+	  MaskPortRotate	  "default"
+	  MaskIconUnits		  "autoscale"
+	  MaskValueString	  "4"
+	  System {
+	    Name		    "Slave1"
+	    Location		    [582, 371, 857, 534]
+	    Open		    off
+	    ModelBrowserVisibility  off
+	    ModelBrowserWidth	    200
+	    ScreenColor		    "white"
+	    PaperOrientation	    "landscape"
+	    PaperPositionMode	    "auto"
+	    PaperType		    "A4"
+	    PaperUnits		    "centimeters"
+	    TiledPaperMargins	    [1.270000, 1.270000, 1.270000, 1.270000]
+	    TiledPageScale	    1
+	    ShowPageBoundaries	    off
+	    ZoomFactor		    "100"
+	    Block {
+	      BlockType		      Inport
+	      Name		      "S_in"
+	      SID		      "869"
+	      Position		      [25, 113, 55, 127]
+	      IconDisplay	      "Port number"
+	    }
+	    Block {
+	      BlockType		      M-S-Function
+	      Name		      "slave_in"
+	      SID		      "870"
+	      Ports		      [1, 1]
+	      Position		      [80, 97, 135, 133]
+	      BackgroundColor	      "yellow"
+	      FunctionName	      "slave_in"
+	    }
+	    Block {
+	      BlockType		      M-S-Function
+	      Name		      "slave_out"
+	      SID		      "871"
+	      Ports		      [0, 2]
+	      Position		      [80, 27, 135, 63]
+	      BackgroundColor	      "yellow"
+	      FunctionName	      "slave_out"
+	    }
+	    Block {
+	      BlockType		      Outport
+	      Name		      "S_out"
+	      SID		      "872"
+	      Position		      [160, 28, 190, 42]
+	      IconDisplay	      "Port number"
+	    }
+	    Block {
+	      BlockType		      Outport
+	      Name		      "scope_in"
+	      SID		      "873"
+	      Position		      [210, 108, 240, 122]
+	      Port		      "2"
+	      IconDisplay	      "Port number"
+	    }
+	    Block {
+	      BlockType		      Outport
+	      Name		      "scope_out"
+	      SID		      "874"
+	      Position		      [210, 48, 240, 62]
+	      Port		      "3"
+	      IconDisplay	      "Port number"
+	    }
+	    Line {
+	      SrcBlock		      "slave_out"
+	      SrcPort		      1
+	      DstBlock		      "S_out"
+	      DstPort		      1
+	    }
+	    Line {
+	      SrcBlock		      "S_in"
+	      SrcPort		      1
+	      Points		      [5, 0]
+	      DstBlock		      "slave_in"
+	      DstPort		      1
+	    }
+	    Line {
+	      SrcBlock		      "slave_out"
+	      SrcPort		      2
+	      DstBlock		      "scope_out"
+	      DstPort		      1
+	    }
+	    Line {
+	      SrcBlock		      "slave_in"
+	      SrcPort		      1
+	      DstBlock		      "scope_in"
+	      DstPort		      1
+	    }
+	  }
+	}
+	Block {
+	  BlockType		  SubSystem
+	  Name			  "Slave2"
+	  SID			  "882"
+	  Ports			  [1, 3]
+	  Position		  [95, 379, 195, 481]
+	  Priority		  "2"
+	  FontName		  "Arial"
+	  MinAlgLoopOccurrences	  off
+	  PropExecContextOutsideSubsystem off
+	  RTWSystemCode		  "Auto"
+	  FunctionWithSeparateData off
+	  Opaque		  off
+	  RequestExecContextInheritance	off
+	  MaskHideContents	  off
+	  MaskPromptString	  "Slave number"
+	  MaskStyleString	  "edit"
+	  MaskVariables		  "slave_number=@1;"
+	  MaskTunableValueString  "off"
+	  MaskEnableString	  "on"
+	  MaskVisibilityString	  "on"
+	  MaskToolTipString	  "on"
+	  MaskIconFrame		  on
+	  MaskIconOpaque	  on
+	  MaskIconRotate	  "none"
+	  MaskPortRotate	  "default"
+	  MaskIconUnits		  "autoscale"
+	  MaskValueString	  "5"
+	  System {
+	    Name		    "Slave2"
+	    Location		    [70, 791, 345, 954]
+	    Open		    off
+	    ModelBrowserVisibility  off
+	    ModelBrowserWidth	    200
+	    ScreenColor		    "white"
+	    PaperOrientation	    "landscape"
+	    PaperPositionMode	    "auto"
+	    PaperType		    "A4"
+	    PaperUnits		    "centimeters"
+	    TiledPaperMargins	    [1.270000, 1.270000, 1.270000, 1.270000]
+	    TiledPageScale	    1
+	    ShowPageBoundaries	    off
+	    ZoomFactor		    "100"
+	    Block {
+	      BlockType		      Inport
+	      Name		      "S_in"
+	      SID		      "883"
+	      Position		      [25, 113, 55, 127]
+	      IconDisplay	      "Port number"
+	    }
+	    Block {
+	      BlockType		      M-S-Function
+	      Name		      "slave_in"
+	      SID		      "884"
+	      Ports		      [1, 1]
+	      Position		      [80, 97, 135, 133]
+	      BackgroundColor	      "yellow"
+	      FunctionName	      "slave_in"
+	    }
+	    Block {
+	      BlockType		      M-S-Function
+	      Name		      "slave_out"
+	      SID		      "885"
+	      Ports		      [0, 2]
+	      Position		      [80, 27, 135, 63]
+	      BackgroundColor	      "yellow"
+	      FunctionName	      "slave_out"
+	    }
+	    Block {
+	      BlockType		      Outport
+	      Name		      "S_out"
+	      SID		      "886"
+	      Position		      [160, 28, 190, 42]
+	      IconDisplay	      "Port number"
+	    }
+	    Block {
+	      BlockType		      Outport
+	      Name		      "scope_in"
+	      SID		      "887"
+	      Position		      [210, 113, 240, 127]
+	      Port		      "2"
+	      IconDisplay	      "Port number"
+	    }
+	    Block {
+	      BlockType		      Outport
+	      Name		      "scope_out"
+	      SID		      "888"
+	      Position		      [210, 48, 240, 62]
+	      Port		      "3"
+	      IconDisplay	      "Port number"
+	    }
+	    Line {
+	      SrcBlock		      "slave_out"
+	      SrcPort		      1
+	      DstBlock		      "S_out"
+	      DstPort		      1
+	    }
+	    Line {
+	      SrcBlock		      "S_in"
+	      SrcPort		      1
+	      Points		      [5, 0]
+	      DstBlock		      "slave_in"
+	      DstPort		      1
+	    }
+	    Line {
+	      SrcBlock		      "slave_out"
+	      SrcPort		      2
+	      DstBlock		      "scope_out"
+	      DstPort		      1
+	    }
+	    Line {
+	      SrcBlock		      "slave_in"
+	      SrcPort		      1
+	      Points		      [0, 5]
+	      DstBlock		      "scope_in"
+	      DstPort		      1
+	    }
+	  }
+	}
+	Block {
+	  BlockType		  SubSystem
+	  Name			  "Slave3"
+	  SID			  "889"
+	  Ports			  [1, 3]
+	  Position		  [665, 341, 760, 449]
+	  BlockMirror		  on
+	  Priority		  "2"
+	  FontName		  "Arial"
+	  MinAlgLoopOccurrences	  off
+	  PropExecContextOutsideSubsystem off
+	  RTWSystemCode		  "Auto"
+	  FunctionWithSeparateData off
+	  Opaque		  off
+	  RequestExecContextInheritance	off
+	  MaskHideContents	  off
+	  MaskPromptString	  "Slave number"
+	  MaskStyleString	  "edit"
+	  MaskVariables		  "slave_number=@1;"
+	  MaskTunableValueString  "off"
+	  MaskEnableString	  "on"
+	  MaskVisibilityString	  "on"
+	  MaskToolTipString	  "on"
+	  MaskIconFrame		  on
+	  MaskIconOpaque	  on
+	  MaskIconRotate	  "none"
+	  MaskPortRotate	  "default"
+	  MaskIconUnits		  "autoscale"
+	  MaskValueString	  "6"
+	  System {
+	    Name		    "Slave3"
+	    Location		    [709, 700, 984, 863]
+	    Open		    off
+	    ModelBrowserVisibility  off
+	    ModelBrowserWidth	    200
+	    ScreenColor		    "white"
+	    PaperOrientation	    "landscape"
+	    PaperPositionMode	    "auto"
+	    PaperType		    "A4"
+	    PaperUnits		    "centimeters"
+	    TiledPaperMargins	    [1.270000, 1.270000, 1.270000, 1.270000]
+	    TiledPageScale	    1
+	    ShowPageBoundaries	    off
+	    ZoomFactor		    "100"
+	    Block {
+	      BlockType		      Inport
+	      Name		      "S_in"
+	      SID		      "890"
+	      Position		      [25, 113, 55, 127]
+	      IconDisplay	      "Port number"
+	    }
+	    Block {
+	      BlockType		      M-S-Function
+	      Name		      "slave_in"
+	      SID		      "891"
+	      Ports		      [1, 1]
+	      Position		      [80, 97, 135, 133]
+	      BackgroundColor	      "yellow"
+	      FunctionName	      "slave_in"
+	    }
+	    Block {
+	      BlockType		      M-S-Function
+	      Name		      "slave_out"
+	      SID		      "892"
+	      Ports		      [0, 2]
+	      Position		      [80, 27, 135, 63]
+	      BackgroundColor	      "yellow"
+	      FunctionName	      "slave_out"
+	    }
+	    Block {
+	      BlockType		      Outport
+	      Name		      "S_out"
+	      SID		      "893"
+	      Position		      [160, 28, 190, 42]
+	      IconDisplay	      "Port number"
+	    }
+	    Block {
+	      BlockType		      Outport
+	      Name		      "scope_in"
+	      SID		      "894"
+	      Position		      [210, 113, 240, 127]
+	      Port		      "2"
+	      IconDisplay	      "Port number"
+	    }
+	    Block {
+	      BlockType		      Outport
+	      Name		      "scope_out"
+	      SID		      "895"
+	      Position		      [210, 48, 240, 62]
+	      Port		      "3"
+	      IconDisplay	      "Port number"
+	    }
+	    Line {
+	      SrcBlock		      "slave_out"
+	      SrcPort		      1
+	      DstBlock		      "S_out"
+	      DstPort		      1
+	    }
+	    Line {
+	      SrcBlock		      "S_in"
+	      SrcPort		      1
+	      Points		      [5, 0]
+	      DstBlock		      "slave_in"
+	      DstPort		      1
+	    }
+	    Line {
+	      SrcBlock		      "slave_out"
+	      SrcPort		      2
+	      DstBlock		      "scope_out"
+	      DstPort		      1
+	    }
+	    Line {
+	      SrcBlock		      "slave_in"
+	      SrcPort		      1
+	      Points		      [0, 5]
+	      DstBlock		      "scope_in"
+	      DstPort		      1
+	    }
+	  }
+	}
+	Block {
+	  BlockType		  Reference
+	  Name			  "Switch"
+	  SID			  "938"
+	  Ports			  [16, 16]
+	  Position		  [415, 158, 525, 332]
+	  BackgroundColor	  "yellow"
+	  LibraryVersion	  "1.20"
+	  SourceBlock		  "model_lib/Switch"
+	  SourceType		  ""
+	  switch_number		  "2"
+	}
+	Block {
+	  BlockType		  Outport
+	  Name			  "par_out"
+	  SID			  "942"
+	  Position		  [600, 98, 630, 112]
+	  NamePlacement		  "alternate"
+	  FontName		  "Arial"
+	  IconDisplay		  "Port number"
+	}
+	Line {
+	  SrcBlock		  "Slave1"
+	  SrcPort		  1
+	  DstBlock		  "Switch"
+	  DstPort		  7
+	}
+	Line {
+	  SrcBlock		  "Slave2"
+	  SrcPort		  1
+	  Points		  [65, 0; 0, -155]
+	  DstBlock		  "Switch"
+	  DstPort		  8
+	}
+	Line {
+	  SrcBlock		  "Slave3"
+	  SrcPort		  1
+	  Points		  [0, 15; -275, 0; 0, -125]
+	  DstBlock		  "Switch"
+	  DstPort		  9
+	}
+	Line {
+	  SrcBlock		  "Switch"
+	  SrcPort		  7
+	  Points		  [40, 0; 0, 120; -515, 0; 0, -85]
+	  DstBlock		  "Slave1"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "Switch"
+	  SrcPort		  8
+	  Points		  [30, 0]
+	  Branch {
+	    Points		    [0, 120; -505, 0; 0, 70]
+	    DstBlock		    "Slave2"
+	    DstPort		    1
+	  }
+	  Branch {
+	    Points		    [25, 0; 0, -100; -180, 0; 0, -50]
+	    DstBlock		    "Scope3"
+	    DstPort		    2
+	  }
+	}
+	Line {
+	  SrcBlock		  "Switch"
+	  SrcPort		  9
+	  Points		  [245, 0]
+	  DstBlock		  "Slave3"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "per_in"
+	  SrcPort		  1
+	  Points		  [30, 0]
+	  Branch {
+	    Points		    [20, 0; 0, 30]
+	    DstBlock		    "Switch"
+	    DstPort		    2
+	  }
+	  Branch {
+	    Points		    [0, -75]
+	    DstBlock		    "Scope3"
+	    DstPort		    1
+	  }
+	}
+	Line {
+	  SrcBlock		  "Switch"
+	  SrcPort		  2
+	  Points		  [10, 0; 0, -75]
+	  DstBlock		  "par_out"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "Switch"
+	  SrcPort		  1
+	  Points		  [120, 0; 0, -75]
+	  DstBlock		  "Master1"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "Master1"
+	  SrcPort		  1
+	  Points		  [10, 0; 0, -30; -415, 0; 0, 140]
+	  DstBlock		  "Switch"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "Slave2"
+	  SrcPort		  2
+	  Points		  [25, 0; 0, -345]
+	  DstBlock		  "Scope1"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "Slave2"
+	  SrcPort		  3
+	  Points		  [40, 0]
+	  DstBlock		  "Scope1"
+	  DstPort		  2
+	}
+      }
+    }
+    Block {
+      BlockType		      SubSystem
+      Name		      "sub-network 2"
+      SID		      "1447"
+      Ports		      [1, 1]
+      Position		      [410, 212, 525, 348]
+      FontName		      "Arial Narrow"
+      FontWeight	      "bold"
+      MinAlgLoopOccurrences   off
+      PropExecContextOutsideSubsystem off
+      RTWSystemCode	      "Auto"
+      FunctionWithSeparateData off
+      Opaque		      off
+      RequestExecContextInheritance off
+      MaskHideContents	      off
+      System {
+	Name			"sub-network 2"
+	Location		[444, 102, 1319, 636]
+	Open			off
+	ModelBrowserVisibility	off
+	ModelBrowserWidth	200
+	ScreenColor		"white"
+	PaperOrientation	"landscape"
+	PaperPositionMode	"auto"
+	PaperType		"A4"
+	PaperUnits		"centimeters"
+	TiledPaperMargins	[1.270000, 1.270000, 1.270000, 1.270000]
+	TiledPageScale		1
+	ShowPageBoundaries	off
+	ZoomFactor		"100"
+	Block {
+	  BlockType		  Inport
+	  Name			  "per_in"
+	  SID			  "1448"
+	  Position		  [275, 138, 305, 152]
+	  NamePlacement		  "alternate"
+	  FontName		  "Arial"
+	  IconDisplay		  "Port number"
+	}
+	Block {
+	  BlockType		  SubSystem
+	  Name			  "Master1"
+	  SID			  "1626"
+	  Ports			  [1, 3]
+	  Position		  [680, 71, 780, 179]
+	  Priority		  "1"
+	  FontName		  "Arial"
+	  MinAlgLoopOccurrences	  off
+	  PropExecContextOutsideSubsystem off
+	  RTWSystemCode		  "Auto"
+	  FunctionWithSeparateData off
+	  Opaque		  off
+	  RequestExecContextInheritance	off
+	  MaskHideContents	  off
+	  MaskPromptString	  "Master number"
+	  MaskStyleString	  "edit"
+	  MaskVariables		  "master_number=@1;"
+	  MaskTunableValueString  "off"
+	  MaskEnableString	  "on"
+	  MaskVisibilityString	  "on"
+	  MaskToolTipString	  "on"
+	  MaskIconFrame		  on
+	  MaskIconOpaque	  on
+	  MaskIconRotate	  "none"
+	  MaskPortRotate	  "default"
+	  MaskIconUnits		  "autoscale"
+	  MaskValueString	  "3"
+	  System {
+	    Name		    "Master1"
+	    Location		    [89, 445, 406, 627]
+	    Open		    off
+	    ModelBrowserVisibility  off
+	    ModelBrowserWidth	    200
+	    ScreenColor		    "white"
+	    PaperOrientation	    "landscape"
+	    PaperPositionMode	    "auto"
+	    PaperType		    "A4"
+	    PaperUnits		    "centimeters"
+	    TiledPaperMargins	    [1.270000, 1.270000, 1.270000, 1.270000]
+	    TiledPageScale	    1
+	    ShowPageBoundaries	    off
+	    ZoomFactor		    "100"
+	    Block {
+	      BlockType		      Inport
+	      Name		      "M_in"
+	      SID		      "1627"
+	      Position		      [25, 108, 55, 122]
+	      IconDisplay	      "Port number"
+	    }
+	    Block {
+	      BlockType		      M-S-Function
+	      Name		      "Master_in"
+	      SID		      "1628"
+	      Ports		      [1, 1]
+	      Position		      [80, 97, 135, 133]
+	      BackgroundColor	      "yellow"
+	      FunctionName	      "master_in"
+	    }
+	    Block {
+	      BlockType		      M-S-Function
+	      Name		      "Master_out"
+	      SID		      "1629"
+	      Ports		      [0, 2]
+	      Position		      [80, 27, 135, 63]
+	      BackgroundColor	      "yellow"
+	      FunctionName	      "master_out"
+	    }
+	    Block {
+	      BlockType		      Outport
+	      Name		      "M_out"
+	      SID		      "1630"
+	      Position		      [160, 28, 190, 42]
+	      IconDisplay	      "Port number"
+	    }
+	    Block {
+	      BlockType		      Outport
+	      Name		      "scope_in"
+	      SID		      "1631"
+	      Position		      [185, 108, 215, 122]
+	      Port		      "2"
+	      IconDisplay	      "Port number"
+	    }
+	    Block {
+	      BlockType		      Outport
+	      Name		      "scope_out"
+	      SID		      "1632"
+	      Position		      [215, 48, 245, 62]
+	      Port		      "3"
+	      IconDisplay	      "Port number"
+	    }
+	    Line {
+	      SrcBlock		      "Master_out"
+	      SrcPort		      1
+	      DstBlock		      "M_out"
+	      DstPort		      1
+	    }
+	    Line {
+	      SrcBlock		      "M_in"
+	      SrcPort		      1
+	      DstBlock		      "Master_in"
+	      DstPort		      1
+	    }
+	    Line {
+	      SrcBlock		      "Master_in"
+	      SrcPort		      1
+	      DstBlock		      "scope_in"
+	      DstPort		      1
+	    }
+	    Line {
+	      SrcBlock		      "Master_out"
+	      SrcPort		      2
+	      DstBlock		      "scope_out"
+	      DstPort		      1
+	    }
+	  }
+	}
+	Block {
+	  BlockType		  SubSystem
+	  Name			  "Slave1"
+	  SID			  "1457"
+	  Ports			  [1, 3]
+	  Position		  [125, 207, 225, 313]
+	  Priority		  "2"
+	  FontName		  "Arial"
+	  MinAlgLoopOccurrences	  off
+	  PropExecContextOutsideSubsystem off
+	  RTWSystemCode		  "Auto"
+	  FunctionWithSeparateData off
+	  Opaque		  off
+	  RequestExecContextInheritance	off
+	  MaskHideContents	  off
+	  MaskPromptString	  "Slave number"
+	  MaskStyleString	  "edit"
+	  MaskVariables		  "slave_number=@1;"
+	  MaskTunableValueString  "off"
+	  MaskEnableString	  "on"
+	  MaskVisibilityString	  "on"
+	  MaskToolTipString	  "on"
+	  MaskIconFrame		  on
+	  MaskIconOpaque	  on
+	  MaskIconRotate	  "none"
+	  MaskPortRotate	  "default"
+	  MaskIconUnits		  "autoscale"
+	  MaskValueString	  "7"
+	  System {
+	    Name		    "Slave1"
+	    Location		    [582, 371, 857, 534]
+	    Open		    off
+	    ModelBrowserVisibility  off
+	    ModelBrowserWidth	    200
+	    ScreenColor		    "white"
+	    PaperOrientation	    "landscape"
+	    PaperPositionMode	    "auto"
+	    PaperType		    "A4"
+	    PaperUnits		    "centimeters"
+	    TiledPaperMargins	    [1.270000, 1.270000, 1.270000, 1.270000]
+	    TiledPageScale	    1
+	    ShowPageBoundaries	    off
+	    ZoomFactor		    "100"
+	    Block {
+	      BlockType		      Inport
+	      Name		      "S_in"
+	      SID		      "1458"
+	      Position		      [25, 113, 55, 127]
+	      IconDisplay	      "Port number"
+	    }
+	    Block {
+	      BlockType		      M-S-Function
+	      Name		      "slave_in"
+	      SID		      "1459"
+	      Ports		      [1, 1]
+	      Position		      [80, 97, 135, 133]
+	      BackgroundColor	      "yellow"
+	      FunctionName	      "slave_in"
+	    }
+	    Block {
+	      BlockType		      M-S-Function
+	      Name		      "slave_out"
+	      SID		      "1460"
+	      Ports		      [0, 2]
+	      Position		      [80, 27, 135, 63]
+	      BackgroundColor	      "yellow"
+	      FunctionName	      "slave_out"
+	    }
+	    Block {
+	      BlockType		      Outport
+	      Name		      "S_out"
+	      SID		      "1461"
+	      Position		      [160, 28, 190, 42]
+	      IconDisplay	      "Port number"
+	    }
+	    Block {
+	      BlockType		      Outport
+	      Name		      "scope_in"
+	      SID		      "1462"
+	      Position		      [210, 108, 240, 122]
+	      Port		      "2"
+	      IconDisplay	      "Port number"
+	    }
+	    Block {
+	      BlockType		      Outport
+	      Name		      "scope_out"
+	      SID		      "1463"
+	      Position		      [210, 48, 240, 62]
+	      Port		      "3"
+	      IconDisplay	      "Port number"
+	    }
+	    Line {
+	      SrcBlock		      "slave_out"
+	      SrcPort		      1
+	      DstBlock		      "S_out"
+	      DstPort		      1
+	    }
+	    Line {
+	      SrcBlock		      "S_in"
+	      SrcPort		      1
+	      Points		      [5, 0]
+	      DstBlock		      "slave_in"
+	      DstPort		      1
+	    }
+	    Line {
+	      SrcBlock		      "slave_out"
+	      SrcPort		      2
+	      DstBlock		      "scope_out"
+	      DstPort		      1
+	    }
+	    Line {
+	      SrcBlock		      "slave_in"
+	      SrcPort		      1
+	      DstBlock		      "scope_in"
+	      DstPort		      1
+	    }
+	  }
+	}
+	Block {
+	  BlockType		  SubSystem
+	  Name			  "Slave2"
+	  SID			  "1471"
+	  Ports			  [1, 3]
+	  Position		  [85, 374, 185, 476]
+	  Priority		  "2"
+	  FontName		  "Arial"
+	  MinAlgLoopOccurrences	  off
+	  PropExecContextOutsideSubsystem off
+	  RTWSystemCode		  "Auto"
+	  FunctionWithSeparateData off
+	  Opaque		  off
+	  RequestExecContextInheritance	off
+	  MaskHideContents	  off
+	  MaskPromptString	  "Slave number"
+	  MaskStyleString	  "edit"
+	  MaskVariables		  "slave_number=@1;"
+	  MaskTunableValueString  "off"
+	  MaskEnableString	  "on"
+	  MaskVisibilityString	  "on"
+	  MaskToolTipString	  "on"
+	  MaskIconFrame		  on
+	  MaskIconOpaque	  on
+	  MaskIconRotate	  "none"
+	  MaskPortRotate	  "default"
+	  MaskIconUnits		  "autoscale"
+	  MaskValueString	  "8"
+	  System {
+	    Name		    "Slave2"
+	    Location		    [70, 791, 345, 954]
+	    Open		    off
+	    ModelBrowserVisibility  off
+	    ModelBrowserWidth	    200
+	    ScreenColor		    "white"
+	    PaperOrientation	    "landscape"
+	    PaperPositionMode	    "auto"
+	    PaperType		    "A4"
+	    PaperUnits		    "centimeters"
+	    TiledPaperMargins	    [1.270000, 1.270000, 1.270000, 1.270000]
+	    TiledPageScale	    1
+	    ShowPageBoundaries	    off
+	    ZoomFactor		    "100"
+	    Block {
+	      BlockType		      Inport
+	      Name		      "S_in"
+	      SID		      "1472"
+	      Position		      [25, 113, 55, 127]
+	      IconDisplay	      "Port number"
+	    }
+	    Block {
+	      BlockType		      M-S-Function
+	      Name		      "slave_in"
+	      SID		      "1473"
+	      Ports		      [1, 1]
+	      Position		      [80, 97, 135, 133]
+	      BackgroundColor	      "yellow"
+	      FunctionName	      "slave_in"
+	    }
+	    Block {
+	      BlockType		      M-S-Function
+	      Name		      "slave_out"
+	      SID		      "1474"
+	      Ports		      [0, 2]
+	      Position		      [80, 27, 135, 63]
+	      BackgroundColor	      "yellow"
+	      FunctionName	      "slave_out"
+	    }
+	    Block {
+	      BlockType		      Outport
+	      Name		      "S_out"
+	      SID		      "1475"
+	      Position		      [160, 28, 190, 42]
+	      IconDisplay	      "Port number"
+	    }
+	    Block {
+	      BlockType		      Outport
+	      Name		      "scope_in"
+	      SID		      "1476"
+	      Position		      [210, 113, 240, 127]
+	      Port		      "2"
+	      IconDisplay	      "Port number"
+	    }
+	    Block {
+	      BlockType		      Outport
+	      Name		      "scope_out"
+	      SID		      "1477"
+	      Position		      [210, 48, 240, 62]
+	      Port		      "3"
+	      IconDisplay	      "Port number"
+	    }
+	    Line {
+	      SrcBlock		      "slave_out"
+	      SrcPort		      1
+	      DstBlock		      "S_out"
+	      DstPort		      1
+	    }
+	    Line {
+	      SrcBlock		      "S_in"
+	      SrcPort		      1
+	      Points		      [5, 0]
+	      DstBlock		      "slave_in"
+	      DstPort		      1
+	    }
+	    Line {
+	      SrcBlock		      "slave_out"
+	      SrcPort		      2
+	      DstBlock		      "scope_out"
+	      DstPort		      1
+	    }
+	    Line {
+	      SrcBlock		      "slave_in"
+	      SrcPort		      1
+	      Points		      [0, 5]
+	      DstBlock		      "scope_in"
+	      DstPort		      1
+	    }
+	  }
+	}
+	Block {
+	  BlockType		  SubSystem
+	  Name			  "Slave3"
+	  SID			  "1478"
+	  Ports			  [1, 3]
+	  Position		  [655, 336, 750, 444]
+	  BlockMirror		  on
+	  Priority		  "2"
+	  FontName		  "Arial"
+	  MinAlgLoopOccurrences	  off
+	  PropExecContextOutsideSubsystem off
+	  RTWSystemCode		  "Auto"
+	  FunctionWithSeparateData off
+	  Opaque		  off
+	  RequestExecContextInheritance	off
+	  MaskHideContents	  off
+	  MaskPromptString	  "Slave number"
+	  MaskStyleString	  "edit"
+	  MaskVariables		  "slave_number=@1;"
+	  MaskTunableValueString  "off"
+	  MaskEnableString	  "on"
+	  MaskVisibilityString	  "on"
+	  MaskToolTipString	  "on"
+	  MaskIconFrame		  on
+	  MaskIconOpaque	  on
+	  MaskIconRotate	  "none"
+	  MaskPortRotate	  "default"
+	  MaskIconUnits		  "autoscale"
+	  MaskValueString	  "9"
+	  System {
+	    Name		    "Slave3"
+	    Location		    [709, 700, 984, 863]
+	    Open		    off
+	    ModelBrowserVisibility  off
+	    ModelBrowserWidth	    200
+	    ScreenColor		    "white"
+	    PaperOrientation	    "landscape"
+	    PaperPositionMode	    "auto"
+	    PaperType		    "A4"
+	    PaperUnits		    "centimeters"
+	    TiledPaperMargins	    [1.270000, 1.270000, 1.270000, 1.270000]
+	    TiledPageScale	    1
+	    ShowPageBoundaries	    off
+	    ZoomFactor		    "100"
+	    Block {
+	      BlockType		      Inport
+	      Name		      "S_in"
+	      SID		      "1479"
+	      Position		      [25, 113, 55, 127]
+	      IconDisplay	      "Port number"
+	    }
+	    Block {
+	      BlockType		      M-S-Function
+	      Name		      "slave_in"
+	      SID		      "1480"
+	      Ports		      [1, 1]
+	      Position		      [80, 97, 135, 133]
+	      BackgroundColor	      "yellow"
+	      FunctionName	      "slave_in"
+	    }
+	    Block {
+	      BlockType		      M-S-Function
+	      Name		      "slave_out"
+	      SID		      "1481"
+	      Ports		      [0, 2]
+	      Position		      [80, 27, 135, 63]
+	      BackgroundColor	      "yellow"
+	      FunctionName	      "slave_out"
+	    }
+	    Block {
+	      BlockType		      Outport
+	      Name		      "S_out"
+	      SID		      "1482"
+	      Position		      [160, 28, 190, 42]
+	      IconDisplay	      "Port number"
+	    }
+	    Block {
+	      BlockType		      Outport
+	      Name		      "scope_in"
+	      SID		      "1483"
+	      Position		      [210, 113, 240, 127]
+	      Port		      "2"
+	      IconDisplay	      "Port number"
+	    }
+	    Block {
+	      BlockType		      Outport
+	      Name		      "scope_out"
+	      SID		      "1484"
+	      Position		      [210, 48, 240, 62]
+	      Port		      "3"
+	      IconDisplay	      "Port number"
+	    }
+	    Line {
+	      SrcBlock		      "slave_out"
+	      SrcPort		      1
+	      DstBlock		      "S_out"
+	      DstPort		      1
+	    }
+	    Line {
+	      SrcBlock		      "S_in"
+	      SrcPort		      1
+	      Points		      [5, 0]
+	      DstBlock		      "slave_in"
+	      DstPort		      1
+	    }
+	    Line {
+	      SrcBlock		      "slave_out"
+	      SrcPort		      2
+	      DstBlock		      "scope_out"
+	      DstPort		      1
+	    }
+	    Line {
+	      SrcBlock		      "slave_in"
+	      SrcPort		      1
+	      Points		      [0, 5]
+	      DstBlock		      "scope_in"
+	      DstPort		      1
+	    }
+	  }
+	}
+	Block {
+	  BlockType		  Reference
+	  Name			  "Switch"
+	  SID			  "1527"
+	  Ports			  [16, 16]
+	  Position		  [405, 153, 515, 327]
+	  BackgroundColor	  "yellow"
+	  LibraryVersion	  "1.19"
+	  SourceBlock		  "model_lib/Switch"
+	  SourceType		  "Unknown"
+	  switch_number		  "3"
+	}
+	Block {
+	  BlockType		  Outport
+	  Name			  "par_out"
+	  SID			  "1528"
+	  Position		  [590, 93, 620, 107]
+	  NamePlacement		  "alternate"
+	  FontName		  "Arial"
+	  IconDisplay		  "Port number"
+	}
+	Line {
+	  SrcBlock		  "Slave1"
+	  SrcPort		  1
+	  DstBlock		  "Switch"
+	  DstPort		  7
+	}
+	Line {
+	  SrcBlock		  "Slave2"
+	  SrcPort		  1
+	  Points		  [65, 0; 0, -155]
+	  DstBlock		  "Switch"
+	  DstPort		  8
+	}
+	Line {
+	  SrcBlock		  "Slave3"
+	  SrcPort		  1
+	  Points		  [0, 15; -275, 0; 0, -125]
+	  DstBlock		  "Switch"
+	  DstPort		  9
+	}
+	Line {
+	  SrcBlock		  "Switch"
+	  SrcPort		  7
+	  Points		  [40, 0; 0, 120; -515, 0; 0, -85]
+	  DstBlock		  "Slave1"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "Switch"
+	  SrcPort		  8
+	  Points		  [30, 0; 0, 120; -505, 0; 0, 70]
+	  DstBlock		  "Slave2"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "Switch"
+	  SrcPort		  9
+	  Points		  [245, 0]
+	  DstBlock		  "Slave3"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "per_in"
+	  SrcPort		  1
+	  Points		  [50, 0; 0, 30]
+	  DstBlock		  "Switch"
+	  DstPort		  2
+	}
+	Line {
+	  SrcBlock		  "Switch"
+	  SrcPort		  2
+	  Points		  [10, 0; 0, -75]
+	  DstBlock		  "par_out"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "Switch"
+	  SrcPort		  1
+	  Points		  [145, 0]
+	  DstBlock		  "Master1"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "Master1"
+	  SrcPort		  1
+	  Points		  [25, 0; 0, -45; -470, 0; 0, 120]
+	  DstBlock		  "Switch"
+	  DstPort		  1
+	}
+      }
+    }
+    Block {
+      BlockType		      SignalViewerScope
+      Name		      "Scope1"
+      SID		      "468"
+      Ports		      []
+      Position		      [20, 15, 60, 55]
+      IOType		      "viewer"
+      List {
+	ListType		IOSignalStrings
+	set0ParseKeys		"19"
+	set0Sigs		"root sub-network:o1"
+      }
+      Location		      [188, 365, 512, 604]
+      Open		      off
+      NumInputPorts	      "1"
+      List {
+	ListType		AxesTitles
+	axes1			"%<SignalLabel>"
+      }
+      ShowDataMarkers	      off
+      ShowLegends	      off
+      DataFormat	      "Array"
+      MaxDataPoints	      "7500"
+      RefreshTime	      0.035000
+    }
+    Line {
+      SrcBlock		      "sub-network 1"
+      SrcPort		      1
+      Points		      [20, 0; 0, -235]
+      DstBlock		      "root sub-network"
+      DstPort		      1
+    }
+    Line {
+      SrcBlock		      "root sub-network"
+      SrcPort		      1
+      Points		      [40, 0; 0, 140; -375, 0; 0, 95]
+      DstBlock		      "sub-network 1"
+      DstPort		      1
+    }
+    Line {
+      SrcBlock		      "root sub-network"
+      SrcPort		      2
+      Points		      [25, 0; 0, 175]
+      DstBlock		      "sub-network 2"
+      DstPort		      1
+    }
+    Line {
+      SrcBlock		      "sub-network 2"
+      SrcPort		      1
+      Points		      [35, 0; 0, -120; -430, 0; 0, -55]
+      DstBlock		      "root sub-network"
+      DstPort		      2
+    }
+  }
+}
