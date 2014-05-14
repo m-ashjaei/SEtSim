@@ -1,10 +1,9 @@
-SEtSim ver 2.0
+SEtSim
 ======
 
-SEtSim (Switched Ethernet Simulator) is a modular simulation tool for switched Ethernet networks. Currently, it supports different architectures of the FTT-SE protocol, i.e., single-/multi-master and cluster-based architectures. 
-Please download the full folder of SEtSim rev2.0 and read the user manual inside that to get start. In case of any question please contact me at: mohammad.ashjaei@mdh.se.
+SEtSim (Switched Ethernet Simulator) is a modular simulation tool for switched Ethernet networks. Currently, two versions of the tool is available to test. SEtSim version 2 supports different architecture of the FTT-SE protocol, i.e., single-/multi-master and cluster-based architectures. SEtSim version 3 supports the Ethernet AVB protocol for single switch case as well. Please download the full folder of SEtSim rev2.0 or rev3.0 and read the user manual inside that to get start. In case of any question please contact me at: mohammad.ashjaei@mdh.se.
 
-Quick Start
+Quick Start for SEtSim ver2.0
 ------
 In order to run the provided example in the SEtSim rev.2.0 folder as a quick start, please open Matlab and open the SEtSim folder through that. Then, open the example.mdl which is a Simulink model. It contains 3 sub-networks each of which has 3 slave nodes. The network setting is assigned in the data\_table.m file. Also, 5 number of messages have been defined for this example in the message\_declare.m file. The user can run the example model by the "Start simulation" button. 
 
