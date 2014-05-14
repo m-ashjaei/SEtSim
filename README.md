@@ -1,7 +1,7 @@
 SEtSim
 ======
 
-SEtSim (Switched Ethernet Simulator) is a modular simulation tool for switched Ethernet networks. Currently, two versions of the tool is available to test. SEtSim version 2 supports different architecture of the FTT-SE protocol, i.e., single-/multi-master and cluster-based architectures. SEtSim version 3 supports the Ethernet AVB protocol for single switch case as well. Please download the full folder of SEtSim rev2.0 or rev3.0 and read the user manual inside that to get start. In case of any question please contact me at: mohammad.ashjaei@mdh.se.
+SEtSim (Switched Ethernet Simulator) is a modular simulation tool for switched Ethernet networks. Currently, two versions of the tool are available to test. SEtSim version 2 supports different architecture of the FTT-SE protocol, i.e., single-/multi-master and cluster-based architectures. SEtSim version 3 supports the Ethernet AVB protocol for single switch case as well. Please download the full folder of SEtSim rev2.0 or rev3.0 and read the user manual inside that to get start. In case of any question please contact me at: mohammad.ashjaei@mdh.se.
 
 Quick Start for SEtSim ver2.0
 ------
