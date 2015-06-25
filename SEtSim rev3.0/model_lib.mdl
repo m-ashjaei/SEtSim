@@ -16,9 +16,9 @@ Library {
   ModifiedByFormat	  "%<Auto>"
   LastModifiedBy	  "mai03"
   ModifiedDateFormat	  "%<Auto>"
-  LastModifiedDate	  "Thu Apr 24 17:50:02 2014"
-  RTWModifiedTimeStamp	  320262600
-  ModelVersionFormat	  "1.%<AutoIncrement:31>"
+  LastModifiedDate	  "Wed May 20 13:32:16 2015"
+  RTWModifiedTimeStamp	  354029535
+  ModelVersionFormat	  "1.%<AutoIncrement:32>"
   ConfigurationManager	  "None"
   SampleTimeColors	  off
   SampleTimeAnnotations	  off
@@ -680,7 +680,7 @@ Library {
   }
   System {
     Name		    "model_lib"
-    Location		    [1881, 288, 2391, 675]
+    Location		    [497, 332, 1007, 719]
     Open		    on
     ModelBrowserVisibility  off
     ModelBrowserWidth	    200
@@ -1012,7 +1012,7 @@ Library {
       MaskValueString	      "1"
     }
     Annotation {
-      Name		      "SEtSim Rev.3.0 Block Library\nCopyright (c) 2014 Malardalen University\nMalardalen Real/Time Resear"
+      Name		      "SEtSim Rev.3.0 Block Library\nCopyright (c) 2014 Malardalen University\nMalardalen Real-Time Resear"
       "ch Center (MRTC)"
       Position		      [246, 341]
     }

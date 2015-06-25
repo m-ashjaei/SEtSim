@@ -51,7 +51,7 @@ node_number = 3;
 
 % number of AVB switch 
 global avb_number;
-avb_number = 1;
+avb_number = 2;
 
 % EC suration time, micro second
 EC = 6000;
@@ -229,18 +229,29 @@ end
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% SETTINGS FOR AVB %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 % set the fractions and rates
-classAfrac = 0.3;   % reserved bandwidth for class A
+classAfrac = 0.4;   % reserved bandwidth for class A
 classBfrac = 0.4;   % reserved bandwidth for class B
 global Rate;
 Rate = 100000000;   % the network bandwidth in bps
 global maxFrameSize;
-maxFrameSize = 1500 * 8;    % maximum frame size
+maxFrameSize = 1500 * 8;    % maximum frame size in bits
 
 % define the node struct
 global node;
 for n = 1:node_number
     node(n).msg_nbr = message_nbr;
     node(n).output = 0;
+    node(n).outBufferClassA = 0;
+    node(n).outBufferClassB = 0;
+    node(n).outBufferClassBE = 0;
+    node(n).creditA = 0;
+    node(n).creditB = 0;
+    node(n).idleSlopeA = classAfrac * Rate;
+    node(n).idleSlopeB = classBfrac * Rate;
+    node(n).sendSlopeA = Rate - node(n).idleSlopeA;
+    node(n).sendSlopeB = Rate - node(n).idleSlopeB;
+    node(n).freePort = 0;
+    node(n).currentMsg = 0;
 end
 
 % Define the struct of AVB switch
@@ -251,19 +262,23 @@ for s = 1:avb_number
         avbSW(s).inBuffer{j} = 0;
         avbSW(s).outBufferClassA{j} = 0;
         avbSW(s).outBufferClassB{j} = 0;
+        avbSW(s).outBufferClassBE{j} = 0;
         avbSW(s).outBuffer{j} = 0;
         avbSW(s).busyTime{j} = 0;
         avbSW(s).timeTag{j} = 0;
         
+        avbSW(s).freePort(j) = 0;
+        avbSW(s).currentMsg(j) = 0;
+        
         avbSW(s).creditA{j} = 0;
         avbSW(s).idleSlopeA{j} = classAfrac * Rate;
-        avbSW(s).sendSlopeA{j} = avbSW(s).idleSlopeA{j} - Rate;
+        avbSW(s).sendSlopeA{j} = Rate - avbSW(s).idleSlopeA{j};
         avbSW(s).hiCreditA{j} = avbSW(s).idleSlopeA{j} * maxFrameSize / Rate;
         avbSW(s).loCreditA{j} = avbSW(s).sendSlopeA{j} * maxFrameSize / Rate;
         
         avbSW(s).creditB{j} = 0;
         avbSW(s).idleSlopeB{j} = classBfrac * Rate;
-        avbSW(s).sendSlopeB{j} = avbSW(s).idleSlopeB{j} - Rate;
+        avbSW(s).sendSlopeB{j} = Rate - avbSW(s).idleSlopeB{j};
         avbSW(s).hiCreditB{j} = avbSW(s).idleSlopeB{j} * maxFrameSize / Rate;
         avbSW(s).loCreditB{j} = avbSW(s).sendSlopeB{j} * maxFrameSize / Rate;
     end
@@ -281,7 +296,7 @@ end
 % define switch port number which the node are connected
 node(1).swPortNumber = 1;
 node(2).swPortNumber = 2;
-node(3).swPortNumber = 3;
+node(3).swPortNumber = 2;
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% Change Based on The Topology %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 

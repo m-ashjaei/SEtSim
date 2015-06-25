@@ -3,7 +3,7 @@
 % This code is written in order to simulate switched Ethernet protocols.
 %---------------------------------------------------------------------
 
-function AVB_mdl(block)
+function swAVB_mdl(block)
 
 setup(block);
 
@@ -78,6 +78,7 @@ global avbSW;
 global node;
 global Rate;
 global maxFrameSize;
+global sampleTime;
 
 % get the current switch number
 avb_nbr = str2num(get_param(gcb, 'avb_number'));
@@ -93,13 +94,26 @@ end
 for i = 1:avbSW(avb_nbr).port_nbr
     message = get_head(avbSW(avb_nbr).inBuffer{i});
     if message > 0
-        avbSW(avb_nbr).inBuffer{i} = remove_msg(avbSW(avb_nbr).inBuffer{i}, message);
-        if msg(message).class == 1
-            avbSW(avb_nbr).outBufferClassA{node(msg(message).dest).swPortNumber} = insert(avbSW(avb_nbr).outBufferClassA{node(msg(message).dest).swPortNumber}, message);
-        elseif msg(message).class == 2
-            avbSW(avb_nbr).outBufferClassB{node(msg(message).dest).swPortNumber} = insert(avbSW(avb_nbr).outBufferClassB{node(msg(message).dest).swPortNumber}, message);
-        elseif msg(message).class == 3
-            avbSW(avb_nbr).outBuffer{node(msg(message).dest).swPortNumber} = insert(avbSW(avb_nbr).outBuffer{node(msg(message).dest).swPortNumber}, message);
+        current_sw_column = find(msg(message).SwitchInRout == avb_nbr);
+        if ~isempty(current_sw_column)
+            outPort = msg(message).SwitchPort(current_sw_column);
+            avbSW(avb_nbr).inBuffer{i} = remove_msg(avbSW(avb_nbr).inBuffer{i}, message);
+            if msg(message).class == 1
+                avbSW(avb_nbr).outBufferClassA{outPort} = insert(avbSW(avb_nbr).outBufferClassA{outPort}, message);
+            elseif msg(message).class == 2
+                avbSW(avb_nbr).outBufferClassB{outPort} = insert(avbSW(avb_nbr).outBufferClassB{outPort}, message);
+            elseif msg(message).class == 3
+                avbSW(avb_nbr).outBuffer{outPort} = insert(avbSW(avb_nbr).outBuffer{outPort}, message);
+            end
+        elseif (isempty(current_sw_column)) && (msg(message).destMasterNumber == avb_nbr)
+            avbSW(avb_nbr).inBuffer{i} = remove_msg(avbSW(avb_nbr).inBuffer{i}, message);
+            if msg(message).class == 1
+                avbSW(avb_nbr).outBufferClassA{node(msg(message).dest).swPortNumber} = insert(avbSW(avb_nbr).outBufferClassA{node(msg(message).dest).swPortNumber}, message);
+            elseif msg(message).class == 2
+                avbSW(avb_nbr).outBufferClassB{node(msg(message).dest).swPortNumber} = insert(avbSW(avb_nbr).outBufferClassB{node(msg(message).dest).swPortNumber}, message);
+            elseif msg(message).class == 3
+                avbSW(avb_nbr).outBuffer{node(msg(message).dest).swPortNumber} = insert(avbSW(avb_nbr).outBuffer{node(msg(message).dest).swPortNumber}, message);
+            end
         end
     end
 end
@@ -108,70 +122,70 @@ end
 
 % put to output of block from the output buffer
 for it = 1:avbSW(avb_nbr).port_nbr
-    
-    % check if the port is busy for transmission of previous message
-    if block.CurrentTime <= (avbSW(avb_nbr).timeTag{it} + avbSW(avb_nbr).busyTime{it})
-        block.OutputPort(it).Data = 0;
-        continue;
+
+    % handling credit A
+    messageA = get_head(avbSW(avb_nbr).outBufferClassA{it});
+    if messageA <= 0
+        avbSW(avb_nbr).creditA{it} = 0;
+    else
+        if avbSW(avb_nbr).creditA{it} >= 0
+            if avbSW(avb_nbr).freePort(it) == 0
+                avbSW(avb_nbr).outBuffer{it} = insert(avbSW(avb_nbr).outBuffer{it}, messageA);
+                avbSW(avb_nbr).creditA{it} = avbSW(avb_nbr).creditA{it} - (msg(messageA).exec * 10 * Rate / 1000 * avbSW(avb_nbr).sendSlopeA{it});
+                avbSW(avb_nbr).outBufferClassA{it} = remove_msg(avbSW(avb_nbr).outBufferClassA{it}, messageA);
+                avbSW(avb_nbr).freePort(it) = 1;
+                avbSW(avb_nbr).currentMsg(it) = messageA;
+            elseif avbSW(avb_nbr).freePort(it) == 1
+                avbSW(avb_nbr).creditA{it} = avbSW(avb_nbr).creditA{it} + sampleTime * avbSW(avb_nbr).idleSlopeA{it};
+            end
+        else
+            avbSW(avb_nbr).creditA{it} = avbSW(avb_nbr).creditA{it} + sampleTime * avbSW(avb_nbr).idleSlopeA{it};
+        end
     end
     
-    % service the buffers
-    out_msg = get_head(avbSW(avb_nbr).outBufferClassA{it});
-    if out_msg > 0
-        if avbSW(avb_nbr).creditA{it} > 0
-            block.OutputPort(it).Data = out_msg;
-            avbSW(avb_nbr).busyTime{it} = msg(out_msg).exec;
-            avbSW(avb_nbr).timeTag{it} = block.CurrentTime;
-            avbSW(avb_nbr).outBufferClassA{it} = remove_msg(avbSW(avb_nbr).outBufferClassA{it}, out_msg);
-            t = msg(out_msg).exec * 10 * Rate / 1000;
-            avbSW(avb_nbr).creditA{it} = avbSW(avb_nbr).creditA{it} - (avbSW(avb_nbr).sendSlopeA{it} * t);
-            if avbSW(avb_nbr).creditA{it} <= avbSW(avb_nbr).loCreditA{it}
-                avbSW(avb_nbr).creditA{it} = avbSW(avb_nbr).loCreditA{it};
-            end
-            continue;
-        end
+    % handling credit B
+    messageB = get_head(avbSW(avb_nbr).outBufferClassB{it});
+    if messageB <= 0
+        avbSW(avb_nbr).creditB{it} = 0;
     else
-        t = maxFrameSize;
-        avbSW(avb_nbr).creditA{it} = avbSW(avb_nbr).creditA{it} + (avbSW(avb_nbr).idleSlopeA{it} * t);
-        if avbSW(avb_nbr).creditA{it} >= avbSW(avb_nbr).hiCreditA{it};
-            avbSW(avb_nbr).creditA{it} = avbSW(avb_nbr).hiCreditA{it};
+        if avbSW(avb_nbr).creditB{it} >= 0
+            if avbSW(avb_nbr).freePort(it) == 0
+                avbSW(avb_nbr).outBuffer{it} = insert(avbSW(avb_nbr).outBuffer{it}, messageB);
+                avbSW(avb_nbr).creditB{it} = avbSW(avb_nbr).creditB{it} - msg(messageB).exec * 10 * Rate / 1000 * avbSW(avb_nbr).sendSlopeB{it};
+                avbSW(avb_nbr).outBufferClassB{it} = remove_msg(avbSW(avb_nbr).outBufferClassB{it}, messageB);
+                avbSW(avb_nbr).freePort(it) = 1;
+                avbSW(avb_nbr).currentMsg(it) = messageB;
+            elseif avbSW(avb_nbr).freePort(it) == 1
+                avbSW(avb_nbr).creditB{it} = avbSW(avb_nbr).creditB{it} + sampleTime * avbSW(avb_nbr).idleSlopeB{it};
+            end
+        else
+            avbSW(avb_nbr).creditB{it} = avbSW(avb_nbr).creditB{it} + sampleTime * avbSW(avb_nbr).idleSlopeB{it};
         end
-        block.OutputPort(it).Data = 0;
     end
     
-    out_msg = get_head(avbSW(avb_nbr).outBufferClassB{it});
-    if out_msg > 0
-        if avbSW(avb_nbr).creditB{it} > 0
-            block.OutputPort(it).Data = out_msg;
-            avbSW(avb_nbr).busyTime{it} = msg(out_msg).exec;
-            avbSW(avb_nbr).timeTag{it} = block.CurrentTime;
-            avbSW(avb_nbr).outBufferClassB{it} = remove_msg(avbSW(avb_nbr).outBufferClassB{it}, out_msg);
-            t = msg(out_msg).exec * 10 * Rate / 1000;
-            avbSW(avb_nbr).creditB{it} = avbSW(avb_nbr).creditB{it} - (avbSW(avb_nbr).sendSlopeB{it} * t);
-            if avbSW(avb_nbr).creditB{it} <= avbSW(avb_nbr).loCreditB{it}
-                avbSW(avb_nbr).creditB{it} = avbSW(avb_nbr).loCreditB{it};
-            end
-            continue;
+    % handling traffic BE
+    messageBE = get_head(avbSW(avb_nbr).outBufferClassBE{it});
+    if messageBE > 0
+        if avbSW(avb_nbr).freePort(it) == 0
+            avbSW(avb_nbr).outBuffer{it} = insert(avbSW(avb_nbr).outBuffer{it}, messageBE);
+            avbSW(avb_nbr).outBufferClassBE{it} = remove_msg(avbSW(avb_nbr).outBufferClassBE{it}, messageBE);
+            avbSW(avb_nbr).freePort(it) = 1;
+            avbSW(avb_nbr).currentMsg(it) = messageBE;
         end
-    else
-        t = maxFrameSize;
-        avbSW(avb_nbr).creditB{it} = avbSW(avb_nbr).creditB{it} + (avbSW(avb_nbr).idleSlopeB{it} * t);
-        if avbSW(avb_nbr).creditB{it} >= avbSW(avb_nbr).hiCreditB{it};
-            avbSW(avb_nbr).creditB{it} = avbSW(avb_nbr).hiCreditB{it};
+    end
+       
+    if avbSW(avb_nbr).currentMsg(it) > 0
+        msg(avbSW(avb_nbr).currentMsg(it)).execDyn = msg(avbSW(avb_nbr).currentMsg(it)).execDyn - sampleTime;
+        if msg(avbSW(avb_nbr).currentMsg(it)).execDyn < 0
+            avbSW(avb_nbr).freePort(it) = 0;
+            msg(avbSW(avb_nbr).currentMsg(it)).delay = msg(avbSW(avb_nbr).currentMsg(it)).delay + msg(avbSW(avb_nbr).currentMsg(it)).exec;
         end
-        block.OutputPort(it).Data = 0;
     end
     
     out_msg = get_head(avbSW(avb_nbr).outBuffer{it});
-    if out_msg > 0
-        block.OutputPort(it).Data = out_msg;
-        avbSW(avb_nbr).busyTime{it} = msg(out_msg).exec;
-        avbSW(avb_nbr).timeTag{it} = block.CurrentTime;
-        avbSW(avb_nbr).outBuffer{it} = remove_msg(avbSW(avb_nbr).outBuffer{it}, out_msg);
-    else
-        block.OutputPort(it).Data = 0;
-    end
-
+    avbSW(avb_nbr).outBuffer{it} = remove_msg(avbSW(avb_nbr).outBuffer{it}, out_msg);
+    block.OutputPort(it).Data = out_msg;
+    
 end
 
 

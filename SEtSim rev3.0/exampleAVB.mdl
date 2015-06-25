@@ -6,7 +6,7 @@ Model {
     NumRootInports	    0
     NumRootOutports	    0
     ParameterArgumentNames  ""
-    ComputedModelVersion    "1.664"
+    ComputedModelVersion    "1.665"
     NumModelReferences	    0
     NumTestPointedSignals   0
   }
@@ -38,9 +38,9 @@ Model {
   ModifiedByFormat	  "%<Auto>"
   LastModifiedBy	  "mai03"
   ModifiedDateFormat	  "%<Auto>"
-  LastModifiedDate	  "Thu Apr 24 15:42:53 2014"
+  LastModifiedDate	  "Wed Jun 24 13:53:42 2015"
   RTWModifiedTimeStamp	  320239564
-  ModelVersionFormat	  "1.%<AutoIncrement:664>"
+  ModelVersionFormat	  "1.%<AutoIncrement:665>"
   ConfigurationManager	  "None"
   SampleTimeColors	  off
   SampleTimeAnnotations	  off
@@ -78,6 +78,7 @@ Model {
     $ObjectID		    2
     $ClassName		    "Simulink.SimulationData.ModelLoggingInfo"
     model_		    "test_mdl"
+    signals_		    []
     overrideMode_	    [0.0]
     Array {
       Type		      "Cell"
@@ -689,7 +690,7 @@ Model {
   }
   System {
     Name		    "exampleAVB"
-    Location		    [511, 281, 1073, 711]
+    Location		    [1244, 328, 1735, 828]
     Open		    on
     ModelBrowserVisibility  off
     ModelBrowserWidth	    200
@@ -703,20 +704,34 @@ Model {
     ShowPageBoundaries	    off
     ZoomFactor		    "100"
     ReportName		    "simulink-default.rpt"
-    SIDHighWatermark	    "1651"
+    SIDHighWatermark	    "1652"
     Block {
       BlockType		      Reference
-      Name		      "AVB Switch"
+      Name		      "AVB Switch 1"
       SID		      "1647"
       Ports		      [6, 6]
       Position		      [285, 103, 365, 202]
       ZOrder		      -3
       BackgroundColor	      "yellow"
       Priority		      "1"
-      LibraryVersion	      "1.30"
+      LibraryVersion	      "1.32"
       SourceBlock	      "model_lib/AVB Switch"
       SourceType	      ""
       avb_number	      "1"
+    }
+    Block {
+      BlockType		      Reference
+      Name		      "AVB Switch 2"
+      SID		      "1652"
+      Ports		      [6, 6]
+      Position		      [285, 318, 365, 417]
+      ZOrder		      -3
+      BackgroundColor	      "yellow"
+      Priority		      "1"
+      LibraryVersion	      "1.32"
+      SourceBlock	      "model_lib/AVB Switch"
+      SourceType	      ""
+      avb_number	      "2"
     }
     Block {
       BlockType		      Reference
@@ -725,7 +740,7 @@ Model {
       Ports		      [1, 1]
       Position		      [155, 39, 220, 101]
       ZOrder		      -3
-      LibraryVersion	      "1.30"
+      LibraryVersion	      "1.32"
       SourceBlock	      "model_lib/Ethernet Node"
       SourceType	      ""
       node_number	      "1"
@@ -737,7 +752,7 @@ Model {
       Ports		      [1, 1]
       Position		      [155, 174, 220, 236]
       ZOrder		      -3
-      LibraryVersion	      "1.30"
+      LibraryVersion	      "1.32"
       SourceBlock	      "model_lib/Ethernet Node"
       SourceType	      ""
       node_number	      "2"
@@ -747,9 +762,9 @@ Model {
       Name		      "Node3"
       SID		      "1650"
       Ports		      [1, 1]
-      Position		      [155, 279, 220, 341]
+      Position		      [115, 359, 180, 421]
       ZOrder		      -3
-      LibraryVersion	      "1.30"
+      LibraryVersion	      "1.32"
       SourceBlock	      "model_lib/Ethernet Node"
       SourceType	      ""
       node_number	      "3"
@@ -778,11 +793,11 @@ Model {
       SrcBlock		      "Node1"
       SrcPort		      1
       Points		      [30, 0; 0, 45]
-      DstBlock		      "AVB Switch"
+      DstBlock		      "AVB Switch 1"
       DstPort		      1
     }
     Line {
-      SrcBlock		      "AVB Switch"
+      SrcBlock		      "AVB Switch 1"
       SrcPort		      1
       Points		      [25, 0; 0, -95; -270, 0; 0, 50]
       DstBlock		      "Node1"
@@ -792,28 +807,42 @@ Model {
       SrcBlock		      "Node2"
       SrcPort		      1
       Points		      [20, 0; 0, -75]
-      DstBlock		      "AVB Switch"
+      DstBlock		      "AVB Switch 1"
       DstPort		      2
     }
     Line {
-      SrcBlock		      "Node3"
-      SrcPort		      1
-      Points		      [45, 0]
-      DstBlock		      "AVB Switch"
-      DstPort		      3
-    }
-    Line {
-      SrcBlock		      "AVB Switch"
+      SrcBlock		      "AVB Switch 1"
       SrcPort		      2
       Points		      [45, 0; 0, 125; -285, 0; 0, -50]
       DstBlock		      "Node2"
       DstPort		      1
     }
     Line {
-      SrcBlock		      "AVB Switch"
-      SrcPort		      3
-      Points		      [30, 0; 0, 220; -260, 0]
+      SrcBlock		      "Node3"
+      SrcPort		      1
+      Points		      [40, 0; 0, -45]
+      DstBlock		      "AVB Switch 2"
+      DstPort		      2
+    }
+    Line {
+      SrcBlock		      "AVB Switch 2"
+      SrcPort		      2
+      Points		      [50, 0; 0, 110; -320, 0]
       DstBlock		      "Node3"
+      DstPort		      1
+    }
+    Line {
+      SrcBlock		      "AVB Switch 2"
+      SrcPort		      1
+      Points		      [35, 0; 0, -55; -145, 0; 0, -130]
+      DstBlock		      "AVB Switch 1"
+      DstPort		      3
+    }
+    Line {
+      SrcBlock		      "AVB Switch 1"
+      SrcPort		      3
+      Points		      [25, 0; 0, 155; -125, 0]
+      DstBlock		      "AVB Switch 2"
       DstPort		      1
     }
   }

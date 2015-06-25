@@ -9,17 +9,9 @@ function [frag_msg_nbr, fragment_message] = msg_defragment(message, message_nbr)
 
 for ms = 1:message_nbr
     % local messages should not bigger than 160 microseconds
-    if message(ms).gType == 0
-        if message(ms).exec >= 0.016
-            message(ms).defNum = ceil(message(ms).exec / 0.010);
-        end
-    % global messages should not bigger than 160 microseconds
-    elseif message(ms).gType == 1
-        if message(ms).exec >= 0.016
-            message(ms).defNum = ceil(message(ms).exec / 0.005);
-        end
+    if message(ms).exec >= 0.02
+        message(ms).defNum = ceil(message(ms).exec / 0.010);
     end
-end
 
 % update the message structure based on defragmentation
 col = 0;

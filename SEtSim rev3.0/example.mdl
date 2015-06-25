@@ -6,7 +6,7 @@ Model {
     NumRootInports	    0
     NumRootOutports	    0
     ParameterArgumentNames  ""
-    ComputedModelVersion    "1.660"
+    ComputedModelVersion    "1.661"
     NumModelReferences	    0
     NumTestPointedSignals   0
   }
@@ -38,9 +38,9 @@ Model {
   ModifiedByFormat	  "%<Auto>"
   LastModifiedBy	  "mai03"
   ModifiedDateFormat	  "%<Auto>"
-  LastModifiedDate	  "Wed Nov 06 16:39:56 2013"
-  RTWModifiedTimeStamp	  305656639
-  ModelVersionFormat	  "1.%<AutoIncrement:660>"
+  LastModifiedDate	  "Mon Nov 17 16:16:19 2014"
+  RTWModifiedTimeStamp	  338141708
+  ModelVersionFormat	  "1.%<AutoIncrement:661>"
   ConfigurationManager	  "None"
   SampleTimeColors	  off
   SampleTimeAnnotations	  off
@@ -78,6 +78,7 @@ Model {
     $ObjectID		    2
     $ClassName		    "Simulink.SimulationData.ModelLoggingInfo"
     model_		    "test_mdl"
+    signals_		    []
     overrideMode_	    [0.0]
     Array {
       Type		      "Cell"
@@ -769,7 +770,7 @@ Model {
   }
   System {
     Name		    "example"
-    Location		    [547, 300, 1145, 680]
+    Location		    [678, 315, 1276, 695]
     Open		    on
     ModelBrowserVisibility  off
     ModelBrowserWidth	    200
@@ -841,7 +842,7 @@ Model {
 	  Ports			  [1, 3]
 	  Position		  [530, 42, 610, 148]
 	  Priority		  "2"
-	  LibraryVersion	  "1.20"
+	  LibraryVersion	  "1.31"
 	  FontName		  "Arial"
 	  FontWeight		  "bold"
 	  SourceBlock		  "model_lib/Master"
@@ -927,7 +928,7 @@ Model {
 	  Ports			  [1, 3]
 	  Position		  [45, 171, 125, 279]
 	  Priority		  "3"
-	  LibraryVersion	  "1.20"
+	  LibraryVersion	  "1.31"
 	  FontName		  "Arial"
 	  FontWeight		  "bold"
 	  SourceBlock		  "model_lib/Slave"
@@ -941,7 +942,7 @@ Model {
 	  Ports			  [1, 3]
 	  Position		  [45, 336, 125, 444]
 	  Priority		  "3"
-	  LibraryVersion	  "1.20"
+	  LibraryVersion	  "1.31"
 	  FontName		  "Arial"
 	  FontWeight		  "bold"
 	  SourceBlock		  "model_lib/Slave"
@@ -956,7 +957,7 @@ Model {
 	  Position		  [530, 301, 610, 409]
 	  BlockMirror		  on
 	  Priority		  "3"
-	  LibraryVersion	  "1.20"
+	  LibraryVersion	  "1.31"
 	  FontName		  "Arial"
 	  FontWeight		  "bold"
 	  SourceBlock		  "model_lib/Slave"
@@ -971,7 +972,7 @@ Model {
 	  Position		  [265, 118, 375, 292]
 	  BackgroundColor	  "yellow"
 	  Priority		  "1"
-	  LibraryVersion	  "1.20"
+	  LibraryVersion	  "1.31"
 	  FontName		  "Arial"
 	  FontWeight		  "bold"
 	  SourceBlock		  "model_lib/Switch"
@@ -1699,7 +1700,7 @@ Model {
 	  Ports			  [16, 16]
 	  Position		  [415, 158, 525, 332]
 	  BackgroundColor	  "yellow"
-	  LibraryVersion	  "1.20"
+	  LibraryVersion	  "1.31"
 	  SourceBlock		  "model_lib/Switch"
 	  SourceType		  ""
 	  switch_number		  "2"
@@ -2334,9 +2335,9 @@ Model {
 	  Ports			  [16, 16]
 	  Position		  [405, 153, 515, 327]
 	  BackgroundColor	  "yellow"
-	  LibraryVersion	  "1.19"
+	  LibraryVersion	  "1.31"
 	  SourceBlock		  "model_lib/Switch"
-	  SourceType		  "Unknown"
+	  SourceType		  ""
 	  switch_number		  "3"
 	}
 	Block {

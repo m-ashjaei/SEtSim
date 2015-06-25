@@ -27,19 +27,17 @@ if avb_set == 1
     fprintf('number of AVB switches: %i \n', avb_number);
        
     for msg_nbr = 1:message_nbr
-        if msg(msg_nbr).defNum == 0
-            delay = 0;
-            for j = 1:length(receive_time_buffer{msg_nbr})
-                delay(j) = receive_time_buffer{msg_nbr}(j) - ready_time_buffer{msg_nbr}(j);
-            end
-            min_delay = min(delay);
-            max_delay = max(delay);
-            mean_delay = mean(delay);
-            if mean_delay > 0
-                fprintf('message %i RT: min %f avg %f max %f \n', msg(msg_nbr).refMsgID, min_delay * 10, mean_delay * 10, max_delay * 10); 
-            else
-                fprintf('Message %i is not received! \n', msg_nbr);
-            end
+        delay = 0;
+        for j = 1:length(receive_time_buffer{msg_nbr})
+            delay(j) = receive_time_buffer{msg_nbr}(j) - ready_time_buffer{msg_nbr}(j);
+        end
+        min_delay = min(delay);
+        max_delay = max(delay);
+        mean_delay = mean(delay);
+        if mean_delay > 0
+            fprintf('message %i RT: min %4.0f avg %4.0f max %4.0f \n', msg(msg_nbr).id, min_delay * 10000, mean_delay * 10000, max_delay * 10000); 
+        else
+            fprintf('Message %i is not received! \n', msg_nbr);
         end
     end
 elseif avb_set == 0
