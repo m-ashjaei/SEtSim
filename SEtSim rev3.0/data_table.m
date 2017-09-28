@@ -90,7 +90,7 @@ global non_frag_msg;
 %[non_frag_msg, message] = msg_gen(EC);
 
 % declare the traffic manually in the message_declare file
-[message, non_frag_msg] = message_declare;
+[message, non_frag_msg] = message_declare_AVB;
 
 % message defragmentation, in case of payload larger than 1500bytes
 [message_nbr, msg] = msg_defragment(message, non_frag_msg);
